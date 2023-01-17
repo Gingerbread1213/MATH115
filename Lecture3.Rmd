@@ -1,0 +1,79 @@
+---
+title: "Math115A 1/12 notes"
+author: "Vincent"
+date: "2023-01-13"
+output: pdf_document
+---
+
+3.1 Definition\newline
+A field F is a set on which one has two operations +, $*$, called addition and multiplication, are defined so that for each x,y $\in$ F corresponds a unique element in F denoted x+y and a unique element denoted $x * y$ such that the following properties are satisfied for all elements a, b, c $\in$F: \newline
+(F1) $a+b = b+a$, $a*b=b*a$\newline\newline
+(F2) $(a+b)+c =a+(b+c); (a$*$b)$*$c =a$*$(b$*$c)\newline\newline
+(F3) There exist distinct elements 0 and 1 in F such that 0+a=a and 1$*$a = a, $\forall$a $\in$F\newline\newline
+(F4) For each a$\in$F and each b$\in$F, b!=0 there exist elements c$\in$F, d$\in$F such that a+c=0, b*d=1
+
+The element x+y called the sum of x&y x$*$y called the product of x&y\newline
+The element 0 is called the identity element for addition\newline
+The element 1 called the identity element for multiplication\newline
+The element c in (F4) with property a + c = 0 called the addition inverse of a.\newline
+The element d in (F4) with property a$*$d = 1 called the multiplication inverse of c\newline\newline\newline
+Examples:\newline
+1. The set $R$ of all real numbers with the usual +, $*$ is a field.\newline
+2. The set Q of rational numbers with usual +,  $*$ is a field\newline
+indeed, because the sum, product and inverses of rational numbes are rational numbers.\newline
+3. The set $Z$ of integers with the usual +, $*$ operations is not a field: properties (F1), (F2), (F3), (F5) are satisfied and also exsitence of additive inverse in (F4) but not the existence of multiplicative inverse: for instance z$\in$$Z$ such that 2$*$d = 1\newline
+4. DEnote by $Z_2$ the set with two elements 0 and 1 on which we define the operations + and $*$ as follows:\newline
+0+0=0,0+1=1,1+0=1,1+1=0,0$*$0=0,0$*$1=0,1$*$0=0,1$*$1=1\newline
+Then one clearly has (F1)-(F5) satisfied! So ($Z_2$, +, $*$) is a field. It is called the field with two elements.\newline
+  Note: the additive inverse of 1 is 1 itself because 1+1=0.\newline
+  One can show that $Z_2$ is the unique field with two elements.\newline\newline\newline
+ 
+ 3.4 Theorem(cancellation law in a field)\newline
+ let(F,+,$*$) be a field. For any a,b,c $\in$ F we have:\newline
+ (1) if a+b =c+b Then a=c\newline
+ (2) if a*b=c*b and b!=0, then a=c.\newline
+ Proof:\newline
+ (1). By (F4) There exists d $\in$ F such that b+d=0. Since a+b =c+b, we can add to both sides the element to obtain:\newline (a+b)+d = (c+b)+d\newline So by (F2) a+(b+d) = c+(b+d) so a+0 = c+0 Thus a=c.\newline
+ (2) has similar proof\newline\newline\newline
+ 
+3.5 Theorem: \newline
+  The element 0 and 1 in a field are unique. Also the additive inverse of an element and the multiplicative inverse of a != 0 element are unique\newline
+proof: \newline
+if 0'$\in$F is another element with the property that 0'+a=a,$\forall$a$\in$F, then we have 0'+0=0, Since + is commutative, 0+0'= 0'+0 and since 0 is identity for addition we also have 0+0'=0' thus 0'=0 similarily for multiplication if 1'$\in$F satisfies 1' * a=a $\forall$ a$\in$F then 1'*1=1\newline
+For uniqueness of addition ad multiply inverse use cancellation thus.\newline\newline\newline
+3.6 Theorem\newline
+If (F,+,*) is a field then we have:\newline
+(1) a*0=0*a=0, $\forall$ a $\in$F\newline
+(2)(-a)*b = a*(-b) = -(a*b) $\forall$ a,b $\in$F\newline
+(3)(-a)*(-b) = a*b\newline\newline
+
+Proof:\newline
+(1) we have a*0=a*(0+0) =a*0+a*0. So by cancellation theorem, a*0 =0. Some for 0*a=0\newline
+(2) Showing that (-a)*b=-(a*b) amount to showing that (-a)*b is the additive inverse of a*b(because of uniqueness of additive inverse in Theorem 3.5).\newline
+we have (-a)*b+a*b = (-a+a)*b = 0*b = 0\newline
+Some for a*(-b)+ab=0\newline
+(3) Note that by (2) above we have(-1)*a=-a=a(-1). Thus, by using(F1) we have (-a)*(-b) = ((-1)a)(-b)= a((-1)(-b)). Where we have used (-1)(-b)=b
+which in turn follows from the fact that (-1)(-1)=1.\newline
+Conclusion from now on, we can just write in a field(F,+,*) -a for the additive inverse of a$\in$F\newline\newline 1/a or a^-1 for the multiplicative inverse of a!=0\newline\newline\newline\newline
+
+Vector Space\newline
+Definition: A vector space V over a field F consists of a set V on which two operations(called addition and scalar multiplication) are defined, so that for each x,y $\in$V, we have a unique element x+y in V and for each x$\in$V and a$\in$F we have a unique element ax$\in$V(scalar) such that the following conditions hold:\newline
+(VS1) x+y=y+x, $\forall$ x,y$\in$V\newline
+(VS2) (x+y)+z=x+(y+z), $\forall$ x,y,z$\in$V\newline
+(VS3) There exists on element in V denoted 0 such that x+0=x, $\forall$x$\in$V\newline
+(VS4) For each x$\in$V have exist y$\in$V such that x+y=0\newline
+(VS5) For each x$\in$V we have 1x=x\newline
+(VS6) For each x$\in$V, a,b$\in$F we have (ab)x=a(bx)\newline
+(VS7) For each x,y$\in$V, a$\in$F we have a(x+y) =ax+ay\newline
+(VS8) For each x$\in$V, a,b$\in$F we have (a+b)x=ay+bx\newline
+
+
+
+
+
+
+
+
+
+
+

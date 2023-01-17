@@ -1,0 +1,68 @@
+---
+title: "Math115A 1/9 notes"
+author: "Vincent"
+date: "2023-01-09"
+output: pdf_document
+---
+
+operation with sets
+
+What is a set A collection of things,
+which we call elements of the set A,
+Normally denoted by lower letters a,b
+we write a $\in$ A to represent that a is belong to the set A"
+
+often descrive a set A by listing its elements 
+e.g. A = {0,2,3,4}
+
+0 $\in$ to A 
+but not equal to A.
+
+
+another thing of writing down is by describing the elements in it in which are we write
+{x $\in$ R(all real number) : x > 2}
+{x $\in$ Z(all intergers) : x > 2} = {3,4,5,6,7.....}
+N (natural number) = {0,1,2,3,4,5....}
+Q (fractions) = {m/n : m,n $\in$ Z, n != 0}
+C (complex number)
+
+intersection 
+              Ai = {x | x $\in$ Ai for all i $\in$ I} reverse A (for all)
+i $\in$ I
+
+Ex:
+
+Ai = {x $\in$ Z | x >= i}
+
+(belong to both sets)
+  $\cap$Ai = empty
+  i$\in$Z
+
+  $\cup$Ai = Z
+  i$\in$Z
+
+
+given the sets X abd A then the difference set
+
+X-A = {x $\in$ X : X !$\in$ A}
+
+if A<X,  then X - A also called the complement if A in X
+
+Theorem
+
+that A is  
+
+X - (A $\cup$ B) = (X - A) $\cap$ (X - B)
+
+X - (A $\cap$ B) = (X - A) $\cup$ (X - B)
+
+
+Theorem
+
+if A < B then for any given set X we have, X - B < X - A
+
+
+$\frac{1}{2}$
+$\cap$
+
+$\in$

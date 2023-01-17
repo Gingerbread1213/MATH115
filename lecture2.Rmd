@@ -1,0 +1,159 @@
+
+
+---
+title: "Math115A 11/1 notes"
+author: "Vincent"
+date: "2023-01-11"
+output: pdf_document
+---
+
+  A set is a collection of mathmatical object. The members of a set are called elements of the set: we write a$\in$A to mean: "a is an element of the set A"
+
+  We often use curly brackets for sets whose elements can be "enumerated"\newline
+
+Example:\newline
+
+{-1,2,3,7} is the set consisting of the numbers(elements) -1,2,3, and 7.\newline
+
+
+
+  More often we describe a set as "elements with same properties", like 
+    A = {x: x has property P}
+  No such cases are often mentions that x is from a larger set (more often set of numbers) that defined and has an established notation.\newline\newline
+
+  Important fact element sets: one can not have at the same time:
+        x$\in$A and x!$\in$A\newline
+
+Example:
+  (x $\in$ R: x >= -2}
+  means "the set of real numbers larger than or equal to -2"\newline\newline\newline
+  
+
+
+  Suppose A, B are sets, We say A is a subset of B and write A<B if for any a$\in$A we have a$\in$B
+(every elemet of A is an element of B)\newline\newline
+
+
+  For any set A we have 0 $\in$ A and A $\in$ A\newline\newline
+
+
+  Two sets A, B are equal if A$\in$B and B$\in$A, we write A=B\newline\newline
+
+
+
+**Operations with sets\newline
+
+  Suppose A, B are sets, We write A$\cup$B for the set {x:x$\in$A or x$\in$B} we read A$\cup$B\newline\newline
+
+
+  We write A$\cap$B for the set {x: x$\in$A and x$\in$B}
+  we read A$\cap$\newline\newline
+
+
+  We write A-B is {x : x$\in$A and x!$\in$B}\newline
+
+  If A$\in$X the we call X-A the complement of A in X\newline\newline
+
+
+
+let A,B $\in$ x Then A $\in$ B if and only if x-B $\in$ x-A
+  proof:\newline
+    The statement asks us to move the things \newline
+    1. if A$\in$B then X-B$\in$X-A \newline
+    2. if X-B$\in$X-A then A$\in$B("<=") meet of "1."\newline
+    proof of 1:\newline
+    Assume A $\in$ B, let x$\in$X-B we want to show that x$\in$X-A i.e. that x does not belong to A. indeed, for if x$\in$A then we would have x$\in$B (because A$\in$B) giving us x$\in$A and x!$\in$A at the same time which is contradiction.\newline\newline
+    proof of 2: (i.e. f "<=")\newline
+    Assume X-B $\in$ X-A. We want to move that A$\in$B, Let a$\in$A if we assume by contradiction that x$\in$B, then x$\in$X-B. But this implies x$\in$X-A, in other words x !$\in$ A. again we get a !$\in$ A, a$\in$A, contradiction.\newline
+    
+
+if and only if = "<=>" or "iff"\newline
+
+if A $\in$ X Then X-(X-A) = A
+  (The complement of the complement of a set A is the set A itself)\newline
+
+For arbitary sets A,B,x
+A$\in$B implies X-B $\in$ X-A
+  proof Need to show 
+    1. X-(X-A)$\in$A and 
+    2. A$\in$X-(X-A)\newline
+    proof of 1:
+    Let x$\in$X-(X-A). This means x!$\in$X-A. We want to show that x$\in$. indeed, for if we assume that x!$\in$A, then x$\in$X-A, to we get x$\in$X-A and x!$\in$X-A, a contradiction.\newline\newline
+    proof of 2:\newline
+    If A,B,X are arbitrary sets then A$\in$B implies X-B$\in$X-A\newline
+  Proof:
+    
+    
+De morgan's law \newline
+X-(A$\cup$B) = (X-A)$\cap$(X-B)\newline
+X-(A$\cap$B) = (X-A)$\cup$(X-B)\newline\newline
+
+
+theorem 1 proof:\newline
+  1. if x$\in$X-(A$\cup$B) Then x $\in$ X-A (because A $\in$A$\cup$B or X-(A$\cup$B)$\in$X-A) and x$\in$X-B (because B$\in$A$\cup$B). Thus x $\in$(X-A)$\cap$(X-B) \newline\newline
+  2. Assume $\in$(X-A)$\cap$(X-B). This means x!$\in$A and x!$\in$B. We want to move that x$\in$X-(A$\cup$B). Assume by contradiction that this is not true. Thus x!$\in$X-(A$\cup$B) which means x$\in$A$\cup$B. So we have at the same time x$\in$A$\cup$B and x!$\in$A$\cup$B which is a contradiction.\newline
+
+theorem 2 proof:\newline
+  1. if x$\in$X-(A$\cap$B). Then (X-A) $\in$ x and (X-B) $\in$x. Thus x$\in$(X-A)$\cup$(X-B).\newline\newline
+  2 Assume x$\in$(X-A)$\cup$(X-B), which means x$\in$(X-A) or x$\in$(X-B).(x!$\in$A$\cap$B) Base on the other side of the equation, x$\in$X-(A$\cap$B), we can assume by contradiction that this is not true.(where X-(A$\cap$B) $\neq$ (X-A)$\cup$(X-B)). Thus, x!$\in$X-(A$\cap$B) which means x$\in$A$\cap$B. So we have at the same time x$\in$A$\cap$B and x!$\in$A$\cap$B which is a contradiction. \newline\newline\newline
+
+
+2.1 
+Definition:
+A function is a triple considering of:
+  a set X called the domain of the function\newline
+  a set Y called the codomain of the function\newline
+  a rule of assigning to each element x$\in$X a unique element y$\in$Y
+    (often this "rule" or "assignment" is given by a formula)\newline
+We write such a triple f:X->Y with the y assigned x denoted f(x) or read it to x maps to f(x)
+  (we often use the notation x$\mapsto$f(x) to emphesize that the function f assigns f(x) to x read it "x maps to f(x)")\newline
+
+2.2
+Definition:
+(2.2.1)let f:X-> Y be a function\newline
+we say that f is injective if whenever x1,x2 $\in$ X  are be that f(x1) = f(x2), it implies x1=x2
+(non_equal elements in X map to non_equal elemetns in Y, under f i.e. $x_1 \neq x_2$ implies $f(x_1) \neq f(x_2)$)\newline\newline
+
+we say that f is surjective if for any y$\in$Y there exist x$\in$X such that f(x)=y
+(Any y$\in$Y is the image of x$\in$X, under f)\newline\newline
+
+we say that bijective if f is both injective and surjective
+(this is some as saying that any y$\in$Y is the image of exactly any x$\in$X, under f)\newline\newline
+
+suppose f:X->Y on g:Y -> Z are functions. The composition of f and g is the function g of f: X_>Z defined by g of f(x)= g(f(x))\newline\newline
+
+
+let f:X->Y be a function and $X_0<X_a$ subset the restriction of f to X0, denoted $f|_X$, $X_0$->Y is the function with domain $X_0$, codomain Y and arraignment given by : for x$\in$$X_0$
+  $f|_x(x)$ = f(x)\newline\newline\newline
+  
+Exercise:\newline
+Show that if f is surjective then n>=m\newline
+proof:\newline
+We say that a function is surjective when any y$\in$Y have a exist x$\in$X, Thus, the number of x$\in$X will always greater or equal to the number of y$\in$Y in the function. Which means n>=m\newline\newline
+
+Show that if f is injective, then n<=m\newline
+proof:\newline
+We say that a function is injective when any x$\in$X have a unique exist y$\in$Y, Thus the number of y$\in$Y will always greater or equal to the number of x$\in$X in the function. Which means n<=m\newline\newline
+
+Show that if f in bijective, the n=m\newline
+proof:\newline
+We say that a function is bijective when any x$\in$X have a unique exist y$\in$Y and any y$\in$Y have a unique exist x$\in$X. Thus the number of the x$\in$X must be equal to the number of x$\in$X in the function. which means n=m\newline\newline
+
+Show that if n>m Then there must exist y$\in$Y be that f($x_1$)=y, f($x_2$)=y for some $x_1$, $x_2$$\in$X, $x_1$$\neq$$x_2$\newline
+proof:\newline
+We say that if $x_1$ $\neq$ $x_2$, where both $x_1$ and $x_2$ have a solution in the codomain. Also, we can tell that n>m, where the number of x$\in$X is greater than y$\in$Y. Thus, f($x_1$)=y, f($x_2$)=y, where two x will "point toward" a single y.
+
+
+Let f:X->Y,
+ g:Y -Z be functions\newline
+  a) if g of f is injective then f is injective the f is injective\newline
+  b) if g of f is surjective then g is surjective.\newline
+  c) if f, g are injective then g of f is injective.\newline
+  d) if f, g are surjective the g of f is surjective
+
+
+
+
+  
+  
+  
