@@ -1,0 +1,90 @@
+---
+title: "Math 115A assign1"
+author: "Vincent"
+date: "2023-01-17"
+output: pdf_document
+---
+
+## Question 1
+**Prove in details de Morgan's law I didn't solve in class:**
+**for any sets X, A, B we have $X-(A\cap B) = (X-A)\cup(X-B)$**\newline
+  Proof:\newline
+    1. If $x\in X-(A\cap B)$ Then, $(X-A)\in x$ and $(X-B)\in x$. Thus $x\in(X-A)\cup(X-B)$ \newline\newline
+    2. Assume $x\in(X-A)\cup(X-B)$, which means that $A\notin x$ and $B\notin x$. Base on the other side of the equation, $x \in X-(A\cap B)$, we can assume by contradiction that this is not true. Thus $x\notin X-(A\cup B)$, which means $x\in A\cap B$. So we have at the same time $x\notin A \cap B$ and $x\in A\cap B$ which is a contradiction
+    
+    
+## Question 2
+
+**Let A, B be subsets of the set of real numbers $\mathbb{R}$ For each one of the statements below write its negation**.\newline\newline
+**(a)** For all $x\in A$ there exists $b\in B$ such that $b>x$\newline\newline
+**Negation:**\newline
+There is no $b\in B$ for all $x\in A$ such that $b>x$
+
+**(b)** There is an $x\in A$ such that for all $b\in B$ we have $b>x$\newline\newline
+**Negation:**\newline
+There is no such $x\in A$ for all $b\in B$ where $b>x$
+
+## Question 3
+
+**Consider the set $\mathbb{Z}_3$={0,1,2} and define on it the operation $+$ and $*$ as follows:**\newline
+For +:\newline
+$0+0=0; 0+1=1;0+2=2$\newline
+$1+0=1; 1+1=2;1+2=0$\newline
+$2+0=2; 2+1=0;2+2=1$\newline
+For *:\newline
+$0*0=0; 0*1=0;0*2=0$\newline
+$1*0=0; 1*1=1;1*2=2$\newline
+$2*0=0; 2*1=2;2*2=1$\newline
+
+**Show that $(\mathbb{Z}_3,+,*)$**\newline\newline
+proof:\newline
+To be determine as a field, it has to follow the five laws of field. It does satisfied(F1), where $a+b=b+a$ and $a*b=b*a$. It does satisfied (F2), where $(a+b)+c=a+(b+c)$ and $(a*b)*c=a*(b*c)$. It does satisfied (F3) where the set contains 0 and 1 such that $0+a=a$ and $1*a=a$, $\forall a \in F$. It does satisfied (F4) where all element, except 0, has a inverse element that is belong to the set. Also, it does satisfied (F5), where $a*(b+c)=a*b+a*c$
+
+## Question 4
+**Consider the subset of $\mathbb{C}$:**\newline
+$Q(i):={x+yi:x,y\in Q}$\newline
+**Prove that Q(i) with addition and multiplication inherited from $\mathbb{C}$(i.e. defined the some way as for all complex numbers) is field**\newline\newline
+proof:\newline
+To be determine as a field, it has to follow the five laws of field. It does satisfied(F1), where $(a+bi)+(c+di)=(c+di)+(a+bi)$ and $(a+bi)*(c+di)=(c+di)*(a+bi)$. It does satisfied (F2), where $((a+bi)+(c+di))+(x+yi)=(a+bi)+((c+di)+(x+yi))$ and $((a+bi)*(c+di))*(x+yi)=(a+bi)*((c+di)*(x+yi))$. It does satisfied (F3) where the set contains 0 and 1 such that $0+(a+bi)=(a+bi)$ and $1*(a+bi)=(a+bi)$, $\forall a \in F$. It does satisfied (F4) where all element, except 0, has a inverse element that is belong to the set. Also, it does satisfied (F5), where $(a+bi)*((c+di)+(x+yi))=(a+bi)*(c+di)+(a+bi)*(x+yi)$
+
+## Question 5
+**Let $(F,+,*)$ be a field, with its operations of addition $+$ and multiplication $*$. Let $E\in F$ be a subset and assume the following fields**\newline
+* **For all $a, b\in E$, $a+b\in E$ and $a*b\in E$. (E is closed to addition & multiplication)**\newline
+* **$0\in E$, $1\in E$**\newline
+* **If $a\in E$ then $-a \in E$**\newline
+* **If $a\in E$, $a\neq 0$ then $a^{-n} \in E$**\newline
+* **Prove that E with the solve operations $+$ and $*$ as F, is a Field. (i.e. with the operations it inherits from F)**\newline\newline
+proof:\newline
+As known that $E\in F$ and set $F$ is a field, so set E can satisfied (F1)(F2)and (F5). Also, we know that $0\in E$ and $1\in E$ where satisfied (F3). Finally, we do have that, "if $a\in E$ then $-a\in E$ and if $a\in E, a\neq 0$ then $a^{-n} \in E$". Therefore, satisfied (F4) and E is a field.
+
+
+## Question 6
+**Let $(F,+,*)$ be a field.**\newline
+**(a) Prove that $(-1)*a=-a$ and $(-2)*a=-(2*a)$ for any $a\in F$**\newline
+**(b) Prove that for any $a\in F$, $a\neq 0$, we have $(-a)^{-1}=-a^{-1}$**\newline\newline
+proof:\newline
+a) According to definition of field, (F2), where $(a*b)*c=a*(b*c)$ then$(-1)*a=(-1)(1)(a)=-a$ and  $(-2)*a=(-1)*(2)*(a)=-(2*a)$\newline
+b) According to definition of field, (F2), where $(a*b)*c=a*(b*c)$ then$(-a)^{-1}=(-1)^{-1}*(1)^{-1}*(a)^{-1}=(-1)*(1)*(a)^{-1}=-a^{-1}$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
