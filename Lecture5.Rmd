@@ -1,0 +1,100 @@
+---
+title: "Math115A 1/20 notes"
+author: "Vincent"
+date: "2023-01-21"
+output: pdf_document
+---
+
+# Sub spaces of vector spaces
+## 5.1 Definition\newline
+A subset W of a vector space V over a field F is called a subspace of V if W is a vector space over F with the operations of addition and scalar multiplication defined on V.\newline\newline
+Note that V itself is a subspace of V. Also, the set {0}, consisting of the vector $0\in V$, is a subspace of V it is called the zero subspace\newline
+If W is a subset of a vector space V over a field F, and we are as lead to check if W is a subspace, then we don't want to check that all conditions VS1-VS8 are satisfied: indeed we do know addition & scalar multiplication check the multiplication check the properties for all vectors in V, so all we need is in fact to check that addition of $x,y\in W$ abd scalar multiplication $ax$ for $x\in W$ keep us within the set W.\newline\newline
+
+## 5.2 Theorem\newline
+
+Let V be a vector space over field F and $W < V$ a subset. Then W is a subspace of V if and only if the following conditions field.\newline
+(a) $0\in W$ (i.e. the zero vector of V belong to W)\newline
+(b) if $x,y\in W$ then $x+y\in W$(i.e. the addition of any two vectors in W stays in W)\newline
+(c) if $x\in W$ and $c\in F$ then $cx\in W$(i.e. the multiplication by any scalor of a vector in x stays in W)\newline\newline
+**Proof**\newline
+if W is a subspace of V then by definition 5.1 it means that W with the operations of addition and scalar multiplication it "inherits" from V is a vector space. Thus (b)&(c) are satisfied. Also, W has by the definition of vector space a "zero element", say $0'\in W$ satisfying $x+0'=x,\forall x\in W$. But we also have $x+0=x$ where 0 is here the zero element in V By Theom 4.7(a) thus implies $0'0=0$, so we have (a) as well "<=" if (a),(b),(c) hold.\newline
+Then W with the addition and scalar multiplication of its elements viewed as elements in V satisfies VS1, VS2, and VS5-8 because we already know all these properties are satisfied in V.\newline
+All we need to show is that W has a zero vector (thus is VS3) and any $x\in W$ has an additive inverse in W (an "opposite")\newline
+but condition (a) tells us that $0\in W$ (no zero element of V belongs to W), and this element does satisfy $x+0=x, \forall x \in W$(because this holds that in fact for all elements x in V in particular for all elements in W)\newline
+Also, by condition (c) we love that $\forall x \in W$, the element $y=(-1)x$ is the opposite of x in V. So $x\in W$ does have an additive inverse in W(what we also called an "opposite"). So VS3 & VS4 are satisfied as well.\newline\newline
+
+## 5.3 Definitions\newline
+Given a matrix $A=(A_{ij})\in M_{m\times n}(F)$ its transpose is the $n\times m$ matrix $A^t \in M_{n\times m}(F)$obtained from A by interchouging the row with the columns, that is $(A^t)_{ij} = A_{ij}$ for all $1\leq i \le n$ and $1\leq j \le m$\newline\newline
+For example:\newline
+1. if $A = \begin{pmatrix}0&1\\2&3\\-4&0 \end{pmatrix}\in M_{3\times 2}(R)$\newline
+then $A^t\in M_{2\times 3}(R)$ is $A^t = \begin{pmatrix} 0&2&-4\\-1&3&0\end{pmatrix}$\newline
+2. $\begin{pmatrix} -2&1\\3&0\end{pmatrix}^t = \begin{pmatrix} -2&3\\1&0\end{pmatrix}$
+
+3. $\begin{pmatrix}3&-1&2\\1&0&-3\end{pmatrix}^t = \begin{pmatrix}3&1\\-1&0\\2&-3 \end{pmatrix}$\newline\newline
+A symmetric matrix A is a matrix such that $A^t = A$\newline
+Note that such matrices necessary have same # of rows and colums\newline
+i.e. $A\in M_{n\times m}(F)$\newline 
+Examples:\newline
+1.$\begin{pmatrix}1&2\\2&0 \end{pmatrix}^t = \begin{pmatrix}1&2\\2&0\end{pmatrix}$ so it is symmetric\newline
+2. Note that $0 =\begin{pmatrix}0&...&0\\|&&|\\2&...&0 \end{pmatrix}\in M_{m\times n}(F)$\newline\newline
+
+## 5.4 Exercise\newline
+show that the set of symmetric matrices in $M_{m\times n}$ is a subspace of $M_{m\times n}(F)$\newline
+Solution\newline
+We need to check (b)&(c) of theom 5.2(we already noticed that the 0 matrix in $M_{m\times n}(F)$ is symmetric as we have (a) of theom 5.2)\newline\newline
+If $A,B\in M_{m\times n}(F)$ are symmetric then $A=(A_{ij})$ and $B=(B_{ij})$ satisfy $A=A^t$, $B=B^t$ so $A_{ij}=A_{ji}, B_{ij}=B_{ji}$ for all $1\le i,j \le n$\newline
+But then $(A+B)_{ij}=A_{ij}+B_{ij}$ so $((A+B)^t)_{ij}=(A+B)_{ji}=A_{ji}+B_{ji}=A_{ij}+B_{ij}$, Showing that $A+B$ is symmetric\newline
+Similarly, if $c\in F$ is a scalar and $A = A^t$ Then $(cA)_{ij}=cA_{ij}, ((cA)^t)_{ij}=(cA)_{ji}=cA_{ij}$ so $cA$ is symmetric\newline\newline
+
+## 5.5 Definitions\newline
+A matrix $A\in M_{n\times m}\in F$ is called a diagonal matrix\newline
+If $A_{ij} = 0, \forall i\ne j$, i.e. if all entries off the diagonal of A are equal to 0\newline
+Example:\newline
+$A= \begin{pmatrix}-1&0&0\\0&2&0\\0&0&3\end{pmatrix}\in M_{3\times 3}(R)$ is a diagonal matrix\newline
+
+$B= \begin{pmatrix}2&0&0&0\\0&-1&0&0\\0&0&0&0\\0&0&0&3\end{pmatrix}\in M_{4\times 4}(R)$ is a diagonal matrix\newline
+Note the 0 matrix in $M_{m\times n}(F)$ is a diagonal matrix, $\forall n$\newline\newline
+Exercise\newline
+Show that the set of diagonal matrices $D_{m\times n}(F)$ in $M_{m\times n}(F)$ is a subspace.\newline
+So indeed, we noticed that $0\in D_{m\times n}(F)$\newline
+Also the sum of two diagnal matrices $A.B\in D_{m\times n}(F)$ satisfies $(A+B)_{ij} = A_{ij}+B_{ij}=0$if $i\ne j$, because both $A_{ij}=0, B_{ij}=0$ if$i\ne j$ (Since A, B are diagonal)\newline
+Similarity if $A\in D_{n\times m}(F)$ and $c\in F$ then $(cA)_{ij} = cA_{ij}=0$ if $i\ne j$ because $A_{ij}=0, \forall i\ne j$\newline\newline
+
+## 5.6 Definition\newline
+Given a $n\times m$ matrix $A\in M_{m\times n}(F)$, the trace of A, denoted tr(A) is the sum of the diagonal entries of A, i.e.\newline
+$tr(A)= \sum_{i=1}^{n}A_{ii}\in F$\newline
+example if $A = \begin{pmatrix}-1&0&2\\3&-2&0\\1&2&2\end{pmatrix}$ then $tr(A) = -1+(-2)+2=-1$\newline\newline
+
+## 5.7 Exercise\newline
+(a) show that the set of matrices $A\in M_{m\times n}(F)$ with $tr(A)=0$ is a subspace of $M_{m\times n}(F)$\newline
+(b) Show that the set of matrices $A\in M_{m\times n}(F)$ with $tr(A)=1$ is not a subspace of $M_{n\times m}(F)$\newline
+(c) Show that the set of matrices $A\in M_{m\times n}(F)$ with $tr(A)\le 0$ is not a subspace\newline\newline
+
+## 5.8 Theorem\newline
+If $W_1, W_2$ are subspace of a vector space V over a field F, then $W_1\cap W_2$ is a subspace of V as well more generally, if $W_i, i\in I$, is a collection of subspace of V then $\cap_{i\in I }W_i$ is a subspace of V.\newline\newline
+Proof\newline
+Since both $W_1, W_2$ are subspace, we have $0\in W_1, 0\in W_2$ so $0\in W_1\in W_2$\newline
+Also, if $x,y \in W_1 \cap W_2$\newline
+Then $x,y \in W_1$, so $x+y\in W_1$ and $x,y \in W_2$, so $x+y\in W_2$\newline
+Thus, $x+y\in W_1\cap W_2$\newline
+Similarly, if$x\in W_1\cap W_2$ and $c\in F$\newline
+Then $x \in W_1$, so $cx\in W_1$ and $x \in W_2$, so $cx\in W_2$\newline
+Thus $cx\in W_1\cap W_2$, and we showed that (a),(b) and (c) of theom 5.2 are all satisfied for $W_1\cap W_2$
+
+General case is similar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
