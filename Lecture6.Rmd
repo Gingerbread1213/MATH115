@@ -1,0 +1,28 @@
+---
+title: "Math115 1/23 notes"
+author: "Vincent"
+date: "2023-01-24"
+output: pdf_document
+---
+
+## 6.1 Definition
+
+If $S_1,S_2$ are nonempty subsets of a vector space V then the sum of $S_1$ and $S_2$, denoted $S_1+S_2$ is the set {$x+y: x\in S_1, y\in S_2$}\newline\newline
+
+## 6.2 Definition
+
+Let $W_1, W_2$ be subspaces of the vector space V. We say that V is the direct sum of $W_1$ and $W_2$ if $W_1\cap W_2=${0} and $W_1+W_2 =V,$ and we then write $V=W_1+W_2$\newline\newline
+
+## 6.3 Exercise
+
+Show that $V=\mathbb{R}^2$ is the direct sum of $W_1=${$(x,x):x\in \mathbb{R}$} and $W_2=${$(y,-y):y]\in \mathbb{R}$}\newline
+**Solution**\newline
+First note that $W_1,W_2$ are indeed vector subspace of $\mathbb{R}^2$ indeed, if we take two elements $(x,x)\in W_1,(Z,Z)\in W_2$, then $(x,x)+(z,z)=(x+z,x+z)\in W_1$. Also, if $c\in \mathbb{R}$ is a scalar, then $c(x,x)=(cx,cx)\in W_1$\newline
+Similarly for $W_2$\newline
+Also, we see that $0=(0,0)\in W_1$ and $0=(0,-0)\in W_2$. So $W_1,W_2$ satisfy the conditions in Theom 5.2 so they are subspace of $V= \mathbb{R}^2$
+
+
+
+
+
+

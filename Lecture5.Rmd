@@ -68,8 +68,17 @@ example if $A = \begin{pmatrix}-1&0&2\\3&-2&0\\1&2&2\end{pmatrix}$ then $tr(A) =
 
 ## 5.7 Exercise\newline
 (a) show that the set of matrices $A\in M_{m\times n}(F)$ with $tr(A)=0$ is a subspace of $M_{m\times n}(F)$\newline
+Solution:\newline
+Closure under addition: If $A, B \in M_{m\times n}(F)$ with $tr(A) = tr(B) = 0,$ then $tr(A + B) = tr(A) + tr(B) = 0 + 0 = 0.$ Therefore, the set is closed under matrix addition.\newline
+Closure under scalar multiplication: If $A \in M_{m\times n}(F)$ with $tr(A) = 0$ and $k \in F,$ then $tr(kA) = ktr(A) = k0 = 0.$ Therefore, the set is closed under scalar multiplication.\newline
+Containing the zero vector: The zero matrix, denoted by O, is an mxn matrix whose entries are all 0. And since the trace of the zero matrix is the sum of its diagonal entries, which are all zero, we have $tr(O) = 0$. Therefore, the zero matrix is an element of the set.\newline\newline
 (b) Show that the set of matrices $A\in M_{m\times n}(F)$ with $tr(A)=1$ is not a subspace of $M_{n\times m}(F)$\newline
+Solution:\newline
+Closure under addition: if $A, B \in M_{m\times n}(F)$ with $tr(A) = tr(B) = 1$, Then $tr(A+B) = tr(A)+tr(B) = 1+1=2$. However $1 \ne 2$. Failed by condition of closure under condition.\newline\newline
 (c) Show that the set of matrices $A\in M_{m\times n}(F)$ with $tr(A)\le 0$ is not a subspace\newline\newline
+Proof:\newline
+Closure under addition: if $A, B \in M_{m\times n}(F)$ with $tr(A) = tr(B) \le 0$, Then $tr(A+B) = tr(A)+tr(B) \le 0$. Therefore, the set is closed under matrix addition.\newline
+Closure under multiplication: if $A\in M_{m\times n}(F)$ with $tr(A) \le 0$ and $k\in F$, Then $ktr(A)$ will less or equal to zero when k is greater or equal than zero. Not all condition. Therefore, failed by closure under multiplication.
 
 ## 5.8 Theorem\newline
 If $W_1, W_2$ are subspace of a vector space V over a field F, then $W_1\cap W_2$ is a subspace of V as well more generally, if $W_i, i\in I$, is a collection of subspace of V then $\cap_{i\in I }W_i$ is a subspace of V.\newline\newline

@@ -1,0 +1,89 @@
+---
+title: "Assign2"
+author: "Vincent"
+date: "2023-01-24"
+output: pdf_document
+---
+
+Exercises 8, 11, 13, 14, 17, 19, 20, 21 from Section 1.2 (pages 15 an 16) of the book. 
+
+
+## Exercises 8
+
+In any vector space, show that$(a+b)(x+y)=ax+ay+bx+by$ for any $x, y\in V$ and any $a,b\in F$\newline\newline
+**Proof:**\newline
+According to VS7 we know that for any $x, y\in V$ and any $a,b\in F$, $(a+b)(x+y) = (a+b)x+(a+b)y$, Then by VS8, we can transfer the equation to $(a+b)x+(a+b)y = ax+bx+ay+by$\newline\newline 
+
+## Exercise 11
+
+Let V = { 0 } consist of a single vector 0 and define $0+0=0$ and $c0=0$ for each scalar c in F. Prove that V is a Vector space over F.\newline\newline 
+**Proof:**\newline
+To consider V as a vector space, it has to satisfied all VS1-8.\newline
+VS1: We know that V consist a single vector 0, and $0+0 = 0+0 = 0$. Therefore, it satisfied commutative of addition.\newline 
+VS2: Same, as V consist a single vector 0, and $(0+0)+0 = 0+0=0$ and $0+(0+0)=0+0=0$ where $(0+0)+0 = 0+(0+0)$. Therefore, satisfied the associative of addition.\newline
+VS3: $x+0=x. \forall x\in V$, V consist only a single vector, $0+0=0$. Therefore, satisfied VS3.\newline
+VS4: $0+0=0$, the inverse of the vector 0 is itself. satisfied $x+(-x)=0, \forall x\in V$\newline
+VS5: $1x=x, \forall x \in V$, Where$1(0)=0$, this also satisfied.\newline
+VS6: $(ab)x=a(bx), \forall x\in V$ and $\forall a,b\in F$. We can have scalar b and c, where $b(c0)=b0=0$ and $(bc)0=0$ (because (bc) is also a scalar in F). Therefore, satisfied\newline
+VS7: $c(x+y)=cx+cy,$ $\forall x,y\in V$ and $\forall c\in F$, we know that $c(0+0)=c(0)=0$, therefore satisfied.\newline
+VS8: $(a+b)x=ax+bx,\forall a,b\in F$ and $\forall x\in V$. we can have two scalars c and d, where $(a+b)0=0$ ($(a+b)$ is also a scalar in F), and $a0+b0=0+0=0$. which satisfied the rule.\newline
+In final, V is a vector space over F.\newline\newline
+
+## Exercise 13
+
+Let V denote the set of ordered pairs of real numbers. If $(a_1, a_2)$ and $(b_1,b_2)$ are elements of V and $c\in R$, define:\newline
+$(a_1,a_2)+(b_1,b_2)=(a_1+b_1,a_2b_2)$ and $c(a_1,a_2)=(ca_1,ca_2)$\newline
+Is V a vector space over R with these operations? Justify your answer.\newline\newline
+**Proof:**\newline
+VS1: $(a_1,a_2)+(b_1,b_2)=(a_1+b_1,a_2b_2)$, and, $(b_1,b_2)+(a_1,a_2)=(b_1+a_1,a_2b_2)$ $(a_1,a_2)+(b_1,b_2)=(b_1,b_2)+(a_1,a_2)$, Satisfy VS1\newline
+VS2: $((a_1,a_2)+(b_1,b_2))+(c_1,c_2) = (a_1+b_1,a_2b_2)+(c_1,c_2) = (a_1+b_1+c_1,a_2b_2c_2)$, and $(a_1,a_2)+((b_1,b_2)+(c_1,c_2)) = (a_1,a_2)+(b_1+c_1,b_2c_2) = (a_1+b_1+c_1,a_2b_2c_2)$ $((a_1,a_2)+(b_1,b_2))+(c_1,c_2) = (a_1,a_2)+((b_1,b_2)+(c_1,c_2))$, satisfy VS2\newline
+VS3: V denote the set of ordered pairs of real numbers which means that V contains 0 as one of it's element. However. $(a_1,a_2)+(0,0) =(a_1+0, a_2(0))=(a_1,0)$ which $(a_1,a_2)+0\ne (a_1,a_2)$ This failed to satisfy V as a vector space over R.\newline
+Therefore, NO, V is not a vector space over R.
+
+## Exercise 14
+
+Let V={$(a_1,a_2,...a_n):a_i \in \mathbb{C}$ for $i=1,2,...n$}; so V is a vector space over $\mathbb{C}$ by Example 1. Is V a vector space over the field of real numbers with the operations of coordinatewise addition and multiplication?\newline\newline
+**Proof:**\newline
+Let V={$(a_1,a_2,...a_n):a_i \in \mathbb{C}$ for $i=1,2,...n$} and let $x=${$x+xi, x+xi,... x+xi$},$y =${y+yi,y+yi,...y+yi$}, $c,d$. We will have that $cx+dy =c${$x+xi, x+xi,... x+xi$}+$d${$y+yi,y+yi,...y+yi$} = {$cx+cxi,cx+cxi....cx+cxi$}+{$dy+dyi, dy+dyi,...dy+dyi$}={$(cx+dy)+(cx+dy)i,(cx+dy)+(cx+dy)i,...(cx+dy)+(cx+dy)i$} and $(cx+dy)+(cx+dy)i\in \mathbb{C}$. Therefore, V is a vector space over the field of real number.\newline\newline
+
+## Exercise 17
+
+Let V = {$(a_1,a_2):a_1,a_2\in F$}. where F is a field. Define addition of elements of V coordinatewise, and for $c\in F$ and $(a_1,a_2)\in V$, define $c(a_1,a_2)=(a_1,0)$. Is V a vector space over F with these operations? Justify your answer.\newline\newline
+**Proof:**\newline
+No, V is not a vector space over F. We have $c(a_1,a_2)=(a_1,0)$ which does not follow VS5 where $1x=x$ or if V is a vector space over F, then $c(a_1,a_2)=(ca_1,ca_2)$. Therefore, V is not a vector space over F.\newline\newline
+
+## Exercise 19
+
+Let V = {$(a_1,a_2):a_1,a_2\in F$}. Define addition of element of V coordinatewise, and for $(a_1,a_2)$ in V and $c\in \mathbb{R}$ define:\newline
+$c(a_1,a_2)= \begin{aligned}(0,0)if\ c=0\\(ca_1, \frac{a_2}{c})if\ c\ne 0\end{aligned}$.\newline
+Is V a vector space over $\mathbb{R}$ with these operations? Justify your answer.\newline\newline
+**Proof:**\newline
+We have $c(a_1,a_2) = (ca_1,\frac{a_2}{c})$ when $c\ne 0$. In VS8, the vector space needs to satisfy the condition where $(a+b)x=ax+bx$. Apply the equation to set V, for the left side of the equation we have, $(c+b)(a_1,a_2) = ((c+b)a_1, \frac{c_2}{a+b})=(ca_1+ba_1,\frac{c_2}{a+b} )$. And the right side of the equation we have $c(a_1,a_2)+b(a_1,a_2) = (ca_1,\frac{a_2}{c})+ (ba_1,\frac{a_2}{b})=(ca_1+ba_1, \frac{a_2}{c} +\frac{a_2}{b})$. Where $(a+b)x\ne ax+bx$. Therefore, No, V is not a vector space over F.\newline\newline
+
+## Exercise 20
+
+Let V denote the set of all real-valued functions f defined on the real line such that $f(1)=0$. Prove that V is a vector space with the operations of addition and scalar multiplication defined in Example 3.\newline\newline
+**Proof:**\newline
+To satisfied as a vector space with the operations of addition and scalar multiplication, where $(f+g)(s)=f(s)+g(s)$ and $(cf)(s) = cf(s)$ and VS1-8 all satisfied.
+Consider the first two laws, we have $(f+g)(1)=f(1)+g(1)=0+0=0\in V$ and $(cf)(1)=cf(1)=0 \in V$.\newline
+VS1: $(f+g)(s) = f(s)+g(s)=g(s)+f(s)=(g+f)(s)$.\newline
+VS2: $((f+g)+j)(s) = f(s)+g(s)+j(s)=(g+(f+j))(s)$\newline
+VS3: $f(1)=0\in V$ and $(f+0)(s)=f(s) + 0(s) = f(s) + 0 = f(s)$\newline
+VS4: $(f+(-f))(1) = f(1)+(-f)(1) = f(1)-f(1)=0-0=0$\newline
+VS5: $(1f)(s) = 1f(s)= f(s)$\newline
+VS6: $(ab)x = a(bx)$ where $((ab)f)(s)=(ab)f(s)=(a)(b)(f(s))=(a)(bf(s))=a((bf)(s))$\newline
+VS7: $a(x+y)=ax+ay$ where $a(f+g)(s)=a(f(s)+g(s))=af(s)+ag(s)$\newline
+VS8: $(a+b)x = ax+by$ where $(a+b)f(s)=a(f(s))+b(f(s))=af(s)+bf(s)$\newline
+Therefore, V is a vector space with the operations of addition and scalar multiplication.\newline\newline
+
+## Exercise 21
+
+Let V and W be vector spaces over a field F. Let Z={$(v,w):v\in V,\ and \ w\in W$}.\newline
+Prove that Z is a vector space over F with the operations\newline
+$(v_1,w_1)+(v_2,w_2)=(v_1+v_2,w_1+w_2)$ and $c(v_1,w_1)=(cv_1,cw_1)$\newline\newline
+**Proof:**\newline
+We know that V and W are vector spaces over field F, which means that V and W both satisfied VS1-8. When Z={$(v,w):v\in V,\ and \ w\in W$} which means that Z is formed by vector space V and W. Therefore, $(v_1)+(v_2)=v_1+v_2$, $(w_1)+(w_2)=w_1+w_2$, and $c(v_1)=cv_1$,$c(w_1)=cw_1$, which also lead to $(v_1,w_1)+(v_2,w_2)=(v_1+v_2,w_1+w_2)\in Z$ and $c(v_1,w_1)=(cv_1,cw_1)\in Z$ Therefore, Z is a vector space over F with the operations.
+
+
+
+
