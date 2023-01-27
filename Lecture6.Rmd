@@ -19,7 +19,89 @@ Show that $V=\mathbb{R}^2$ is the direct sum of $W_1=${$(x,x):x\in \mathbb{R}$} 
 **Solution**\newline
 First note that $W_1,W_2$ are indeed vector subspace of $\mathbb{R}^2$ indeed, if we take two elements $(x,x)\in W_1,(Z,Z)\in W_2$, then $(x,x)+(z,z)=(x+z,x+z)\in W_1$. Also, if $c\in \mathbb{R}$ is a scalar, then $c(x,x)=(cx,cx)\in W_1$\newline
 Similarly for $W_2$\newline
-Also, we see that $0=(0,0)\in W_1$ and $0=(0,-0)\in W_2$. So $W_1,W_2$ satisfy the conditions in Theom 5.2 so they are subspace of $V= \mathbb{R}^2$
+Also, we see that $0=(0,0)\in W_1$ and $0=(0,-0)\in W_2$. So $W_1,W_2$ satisfy the conditions in Theom 5.2 so they are subspace of $V= \mathbb{R}^2$\newline
+We want show that:\newline
+(a) $W_1\cap W_2=${0}\newline
+(b) $W_1+W_2=V$\newline
+To prove (a) assume $v=(v_1,v_2\in R^2)$ is both in $W_1$ and in $W_2$. Since $(V_1,V_2)\in W_1$, we must have $V_2=-V_1$. Thus $V_2=V_1, V_2=-V_1$ so $V_1=-V_1$, Thus $2V_1=0$ which for $V_1\in \mathbb{R}$ implies $V_1=0$. So $V_2=V_1=0$ as well.\newline
+To prove (b), let $v=(v_1,v_2)\in R^2$ we want to find $(x,x)\in W_1,(y,-y)\in W_2$ such that $(x,x)+(y,-y)=(V_1,V_2)$. This means $(x+y,x-y)=(V_1,V_2)$\newline\newline
+So $x+y=V_1,x-y=V_2$\newline
+Thus, to find x,y satisfying these two conditions we need to solve this system of two equation with two unknown x,y in real numbers.\newline 
+From 2nd equation, we get $x=y+V_2$ and replacing in the 1st equation\newline
+$(y+V_2)+y=V_1$\newline
+So $2y=V_1-V_2, y=\frac{V_1-V_2}{2}$\newline
+and so $x=y+V_2=\frac{V_1-V_2}{2}+V_2=\frac{V_1+V_2}{2}$\newline
+Thus $(V_1,V_2)=(\frac{V_1+V_2}{2},\frac{V_1+V_2}{2})+(\frac{V_1-V_2}{2},\frac{V_1-V_2}{2})$ and so we denoted that $W_1+W_2=V$\newline\newline
+
+# Linear Combination of Vectors\newline
+
+## 6.4 Definition\newline
+Let V be a vector space over a field F and $S\in V$ a nonempty subset of V. A vector $v\in V$ is called a linear combination of vectors in S. If there exist a finite number of vectors $u_1,.....,u_n\in S$ and scalars $c_1,...,c_n\in F$ such that $v=c_1u_1+c_2u_2...+c_nu_n$\newline\newline
+We then also say that V is a linear combination of $u_1,...u_n$. The scalars $c_1,...c_n$ are called the coefficients of the linear combination. because $O_v=O_F*V, \forall V\in S\ne0$\newline
+**Note:** The vector $0\in V$ is a linear combination of any $S\in V$\newline
+
+## 6.5 Example\newline
+Denote by V the set of polynomial of degree at most n with coefficients in R, i.e. expressions of the form\newline
+$P(X)=a_0+a_1X+a_2X^2+...+a_nX^n$\newline
+where $a_0,a_1,...,a_n\in \mathbb{R}$, with the usual addition and multiplication by scalars in $\mathbb{R}$:\newline
+$(a_0,a_1X+...+a_nX^n)+(b_0+b_1X+...+b_nX^n)=(a_0+b_0)+(a_1+b_1)X+...+(a_n+b_n)X^n$ and $c(a_0+a_1X+...+a_nX^n)=ca_0+ca_1X+...+ca_nX^n$\newline
+Show that any polynomial in V is a linear combination of the "monomials" $1,X,X^2,...,X^n$ indeed, if $P(X)=a_0+a_1X+...+a_nX_n\in V$ then $a_0,a_1,...,a_n\in \mathbb{R}$ are scalars and we have $P(X)=a_0*1+a_1*X+...+a_nX^n=a_0u_o+a_1u_1+...+a_nu_n$\newline\newline
+
+## 6.6 Definition\newline
+
+If V is a vector space and $S\ne 0\in V$, Then the span of S, denoted $span(S)$, is the set of all linear combinations of vectors in S.\newline
+i.e. $span(S)=${$\Sigma^n_{i=1} c_iu_i: u_1,...u_n\in S, c_1,...c_n\in F, u\ge 1$}\newline
+
+## 6.7 Example\newline
+
+If we take $V = \mathbb{R}^3$ and S={$(1,0,0),(0,1,0)$} Then $span(S)$ is the set of all vectors in $\mathbb{R}^3$ of the form $au_1+bu_2=a(1,0,0)+b(0,1,0)=(a,0,0)+(0,b,0)=(a,b,0),$ with $a,b\in \mathbb{R}$ arbitrary scalars in $\mathbb{R}$\newline
+Thus $span(S)=${$(a,b,0):a,b\in \mathbb{R}$} which we recognize to be the xy plane in the xyz 4-dimensional Euclidean space.\newline\newline
+
+## 6.8 Example\newline
+
+If we take V to be the vector space of polynomials in X of degree $\le n$ with coefficients in $\mathbb{R}$ as in Example 6.5 and we let $S=${$1,X,X^2,...,X^n$} then $span(S)=V$\newline\newline
+
+## 6.9 Example\newline
+
+Given a Field F and denotes by F[X] the set of all polynomials in "undeterminate" X over the field F, i.e. expressions of the form $P(X)=a_0+a_1X+...+a_nX^n$ for some $n\ge 0$ and $a_0,a_1,...a_n\in F$ with the "usual" addition and scalar multiplication\newline
+The degree of $P(X)$ is the largest n such that $a_n\ne 0$.\newline
+(a) show that if $S=${$1,X,X^2,...$} then span(S)=F[X].\newline
+(b) Denote $F_{odd}[X]$ the set of all polynomials with coefficients in F that have only odd coefficients possibly $\ne 0$ and by $F_{even}[X]$ the set of all polynomial with coefficient in F that have only even coefficients possibly $\ne 0$, i.e.$F_{odd}[X]=${$P(X)\in F[X]:P(X)=a_1X+a_3X^3+a_5X^5+...+a_{2n+1}X^{2n+1}, a_1,a_3,...,a_{2n+1}\in F, n\ge 0$}\newline\newline
+$F_{even}[X]=${$P(X)\in F[X]:P(X)=a_0+a_2X^2+a_4X^4+...+a_{2n}X^{2n}, a_0,a_2,a_4,...,a_{2n}\in F, n\ge 0$}\newline
+Show that $W_1=F_{odd}[X],W=F_{even}[X]$ are subspaces of $F[X]$ and that $F[X]=W_1+W_2$\newline
+**Proof:**(exercise)\newline\newline
+
+## 6.10 Theorem\newline
+
+The span of any subset S of a vector space V is a subspace of V. Any subspace of V that contains S must contain $span(S)$\newline
+(e.e. if$W\in V$ subspace with $S\in W$ then $span(S)\in W$)\newline
+**Proof:**\newline
+We have to prove that if $x,y\in span(S)$ then $x+y\in span(S)$ and $cx\in span(S), \forall c\in F$\newline
+Since $x,y\in span(S)$, there exist $u_1,...,u_n\in S, v_1,...,v_n\in S$ and scalars $a_1,...a_n\in F, b_1,...,b_n\in F$ such that\newline
+$x=a_1u_1+...+a_mu_m$\newline
+$y=b_1v_1+...b_nv_n$\newline
+But the $xy=a_1u_1+...+a_mu_m+b_1v_1+...+b_nv_n$\newline
+So $x+y$ is itself a linear combination of $u_1,...u_m,v_1,...v_n\in S$, Thus $x+y\in span(S)$.\newline 
+Also, $cx=c(a_1u_1+...a_mu_m)=(ca_1)u_1+(ca_2)u_2+...+(ca_m)n_m\in span(S)$\newline\newline
+For the last part of Theom: if$W\in V$ is a subspace that contains S and $W\in span(S)$, then there exist $u_1,...,u_m\in S$ and $a_1,...,a_m\in F$ such that $W=a_1u_1+...+a_mu_m$. Since $W$ is a subspace and $u_1+...+u_m\in S\in W$, we have $a_1u_1+...+a_mu_m\in W$. Thus $w\in W$ showing that $span(S)\in W$.
+
+## 6.11 Definition\newline
+
+We say that a subset S of a vector space V generates (or spans) V if $span(S)=V$.\newline\newline
+
+## 6.12 Example\newline
+
+1). If we take $V=\mathbb{R}^2$ like in Exercise 6.3 then $S=${(1,1),(1,-1)} generate (span) V, because we showed in that exercise that any $v\in V$ is of the form $v=au_1+bu_2$ for some scalars $a,b\in \mathbb{R}^2$
+2). If we take $V=F[X]$ and $S=${$1,X,X^2,...$} then $span(S)=F[X]$\newline\newline
+
+## 6.13 Exercise\newline
+
+Show that the matrices $\begin{pmatrix}1&0\\0&0\end{pmatrix}$, $\begin{pmatrix}0&1\\0&0\end{pmatrix}$, $\begin{pmatrix}0&0\\1&0\end{pmatrix}$,
+$\begin{pmatrix}0&0\\0&1\end{pmatrix}$\newline
+generate $M_{2\times2}(F)$\newline
+Solution. Any matrix in $M_{2\times2}(F)$ is of the form $A=\begin{pmatrix}a&b\\c&d\end{pmatrix}$ with $a,b,c,d\in F$ But then $a\begin{pmatrix}1&0\\0&0\end{pmatrix}+b\begin{pmatrix}0&1\\0&0\end{pmatrix}+c\begin{pmatrix}0&0\\1&0\end{pmatrix}+d\begin{pmatrix}0&0\\0&1\end{pmatrix}=\begin{pmatrix}a&0\\0&0\end{pmatrix}+\begin{pmatrix}0&b\\0&0\end{pmatrix}+\begin{pmatrix}0&0\\c&0\end{pmatrix}+\begin{pmatrix}0&0\\0&d\end{pmatrix}=\begin{pmatrix}a&b\\c&d\end{pmatrix}$ So\newline
+A is indeed a linear combination of $\begin{pmatrix}1&0\\0&0\end{pmatrix},\begin{pmatrix}0&1\\0&0\end{pmatrix},\begin{pmatrix}0&0\\1&0\end{pmatrix},\begin{pmatrix}0&0\\0&1\end{pmatrix}$
+
 
 
 
