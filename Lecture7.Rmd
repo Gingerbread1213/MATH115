@@ -1,0 +1,93 @@
+---
+title: "Math115A 1/25 notes"
+author: "Vincent"
+date: "2023-01-25"
+output: pdf_document
+---
+
+Last time we saw that "a few" vectors $v_1,...,v_n$ in a vector space V could generate (span) the entire V, i.e. any other vector $v\in V$ can be written as a linear combination of $v_1,...,v_n$. For instance, any matrix $A\in M_{2\times2}(\mathbb{R})$ is a linear combination of $\begin{pmatrix}1&0\\0&0\end{pmatrix},\begin{pmatrix}0&1\\0&0\end{pmatrix},\begin{pmatrix}0&0\\1&0\end{pmatrix},\begin{pmatrix}0&0\\0&1\end{pmatrix}$\newline
+It is important to find "small" sets of vectors in V that span V in other word "optimal", "most economical" ways to generate V.\newline
+# Linear dependence & linear independence of vectors
+
+## 7.1 Definition\newline
+
+A subset of vectors since vector space V is linearly dependent if there exist finitely many distinct vectors $v_1,..,v_n\in S$ and scalars $c_1,...,c_n\in F$ not all of there 0, such that $c_1v_1+c_2v_2+...+c_nv_n=0$\newline
+In other word: if one can express the vector 0 as a linear combination of distinct vectors in S with non-zero coefficients.\newline\newline
+
+## 7.2 Example\newline
+
+The set $S=${$(-1,1,0),(1,-3,2),(0,1,-1)$} in $\mathbb{R}^3$ is linearly dependent because $v_1+v_2+2v_3=0$ indeed $(-1,1,0)+(1,-3,2)+2(0,1,-1)=(-1,1,0)+(1,-3,2)+(0,2,-2)=(1-1,1-3+2,0+2-2)=(0,0,0)$\newline\newline
+
+## 7.3 Definition\newline
+
+A subset S of a vector space V is linearly independent if it is not linearly dependent.\newline
+We then also say that the vectors in V are linearly independent.\newline\newline
+
+## 7.4 Theorem\newline
+
+The set $S\ne 0\in V$ is linearly independent iff a linear combination $c_1v_1+c_2v_2+...+c_nv_n$ of distinct vectors $v_1,...,v_n\in S$ with $c_1,...,c_n\in F$ is equal to the vector 0 only when all coefficients $c_1,..,c_n$ are zero. i.e. $\Sigma^n_{i=1}c_iv_i=0$ implies $c_i=0,\forall i$\newline
+**Proof:**\newline
+By definition, S linearly independent means it is not linearly dependent. In other words, the only way to write the vector 0 as a linear combination of some distinct vector $v_1,...v_n\in S$ is if we take all coefficients $c_1,...,c_n\in F$ equal to 0.\newline\newline
+
+## 7.5 Example\newline
+
+Let $S=${$(1,0,0,-1),(0,1,0,-1),(0,0,1,-1),(0,0,0,1)$}$\in \mathbb{R}^4$. Show that S is linearly independent.\newline
+**Solution:** By theom 7.4, we need to show that the only linear combination of $v_1,v_2,v_3,v_4$ that equals 0 is the one in all coefficients are 0, i.e. to prove that if $c_1(1,0,0,-1)+c_2(0,1,0,-1)+c_3(0,0,1,-1)+c_4(0,0,0,1)=0$\newline
+Then $c_1=c_2=c_3=c_4=0$.\newline
+indeed $c_1(1,0,0,-1)+c_2(0,1,0,-1)+c_3(0,0,1,-1)+c_4(0,0,0,1)=(c_1,0,0,-c_1)+(0,c_2,0,-c_2)+(0,0,c_3,-c_3)+(0,0,0,c_4)=(c_1,c_2,c_3,-c_1-c_2-c_3+c_4)$ and $(c_1,c_2,c_3,-c_1-c_2-c_3+c_4) = (0,0,0,0)$ i.e. $c_1=0,c_2=0,c_3=0,-c_1-c_2-c_3+c_4=0$ thus $c_4=0$ as well.\newline
+so all coefficients $c_1,c_2,c_3,c_4$ must be equal to 0, showing that indeed the set S is linearly independent.\newline\newline
+
+## 7.6 Example\newline
+
+A set S consisting of just one non-zero vector, S={v} with $v\ne 0$, is always linearly independent, because the only possible linear combination with vectors in S is $cv$ with $c\in F$, and if $cv=0$ then $c=0$. indeed, for if $c\ne 0$ then $cv=0$. implies $c^{-1}(cv)=0, (c^{-1}c)v=0$ so $1*v=v=0$, contradiction.\newline\newline
+
+## 7.7 Theorem\newline
+
+Let V be a vector space and $S_1\in S_2\in V$ subsets of V\newline
+(a) if $S_2$ is linearly independent then $S_1$ is linearly independent\newline
+(b) if $S_1$ is linearly dependent then $S_2$ is linearly dependent.\newline 
+**Proof:**\newline
+We only need to prove (b) because (a) is logically equivalent to (b).\newline
+if $S_1$ is linear dependent then there exist distinct vectors $v_1,...,v_n\in S_1$ and non-zero scalars $c_1,...,c_n\in F$ such that $c_1v_1+c_2v_2...+c_nv_n=0$.\ But because $S_1\in S_2$, the vectors $v_1,...,v_n$ are in $S_2$ as well, so in $S_2$ we have $c_1v_1+...+c_nv_n==0$ with $c_i\ne 0$ and $v_i$ distinct, thus $S_2$ linear dependent.\newline
+The above Theorem says that only subset of a linear independent set is linear independent.\newline\newline
+
+## 7.8 Theorem\newline 
+
+Let V be a vector space and $S\in V$ a subset. Then S is linearly independent iff for any strictly smaller subset $S'\le\ne S$, we have $span(S')\ne span(S)$.\newline
+**Proof:**\newline
+Assume S linear independence and let $S' \in S$ be a subset, $S' \ne S$. Let $v\in S - S'$. if by contradiction we assume $span(S')=span(S)$, then there exist $v_1,...v_n\in S'$ distinct and $c_1,...,c_n\in F$ such that $v=\Sigma^n_{i=1}c_iv_i$. Thus, $c_1v_1+c_2v_2+...+c_nv_n-1*v=0$ with $v_1,...,v_n, v\in S$ distinct vectors and $c_1,c_2,...c_n,-1$ not all = 0 contradicting the fact that S is linear independent.\newline
+Assume that $\forall S' \le\ne S$ we have $span(S')\ne span(S)$. if S would be linear dependent(by contradiction) then $v_1,...,v_n\in S$ distinct and $c_1,...,c_n\in F\ne0$, such that $c_1v_1+...c_nv_n=0.$ By 7.6 we know that we must have $v\ge 2$ So $c_1v_1=-c_2v_2-...-c_nv_n$ and multiplying both sides by $c_1^{-1}$ we get $v_1=\frac{-c_2}{c_1}v_2-...-\frac{-c_n}{c_1}v_n$. Thus, if we take $S'= S-${$v_1$} then $v_1$ is in the linear span of {$v_2,...,v_n$}$\in S'$, thus $v_1\in span(S')$ So $span(S')=span(S)$, contradiction.\newline
+Another way to satate the theorem 7.8 is this:\newline
+Let V be a vector space and $S\in V$ a linearly independent subset. Let $v\in V$ be a vector that's not in S. Then $s\cup${v} is linearly dependent iff $v\in span(S)$ and $S\cup${v} is linearly independent iff $v\notin span(S)$\newline\newline
+
+## 7.9 Exercise\newline 
+Label the following statement as true/false with testifier. \newline
+(a) Any set $S\in V$ with $0\in S$ is linearly dependent\newline
+**Answer** Yes, because for any distinct $v_1=0,v_2,...,v_n\in S$ we can take $c_1=1, c_2=c_3=...=c_n=0$ and set $1*0+0*v_1+...+0*v_n=0$\newline
+(B)Subsets of linearly dependent sets are linear dependent\newline
+**Answer** No, For instance $S=${$(1,0),(0,1),(-1,-1)$}$\in \mathbb{R^2}$ is linearly dependent set, because $v_1+v_2+v_3=0$ But $S'$={$(1,0),(0,1)$} is a linearly independence subset of S\newline
+(c) subsets of linear independence sets are linear independent\newline
+**Answer** Yes this is state in Theom 7.7\newline\newline
+
+## 7.10 Exercise\newline
+
+Show that $S=${$\begin{pmatrix}1&1\\0&0\\0&0\end{pmatrix},\begin{pmatrix}0&0\\1&1\\0&0\end{pmatrix},\begin{pmatrix}0&0\\0&0\\1&1\end{pmatrix},\begin{pmatrix}1&0\\1&0\\1&0\end{pmatrix},\begin{pmatrix}0&1\\0&1\\0&1\end{pmatrix}$}$\in \mathbb{M}_{3\times 2}(\mathbb{R})$ is linearly dependent\newline
+**solution**:\newline
+In general, to state that $v_1,...,v_5$ are linear dependent/independent are has to solve the system of equation resulting from $c_1v_1+c_2v_2+c_2v_3+c_4v_4+c_5v_5=0$ with the unknowns $c_1,c_2,...,c_5$. if we gets that the only solution is when $c_1=c_2=...=c_5=0$ then {$v_1,...,v_5$} linear independent if we gets solve other solutions where solve $c_i\ne 0$, then linear dependent\newline
+In our case though we solve right away that $v_1+v_2+v_3=\begin{pmatrix}1&1\\0&0\\0&0\end{pmatrix}+\begin{pmatrix}0&0\\1&1\\0&0\end{pmatrix}+\begin{pmatrix}0&0\\0&0\\1&1\end{pmatrix}=\begin{pmatrix}1&1\\1&1\\1&1\end{pmatrix}$ Thus $v_1+v_2+v_3=v_4+v_5$, in other words $v_1+v_2+v_3-v_4-v_5=0$ so {$v_1,...,v_5$} linear independent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
