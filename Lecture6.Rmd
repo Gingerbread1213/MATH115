@@ -31,7 +31,7 @@ From 2nd equation, we get $x=y+V_2$ and replacing in the 1st equation\newline
 $(y+V_2)+y=V_1$\newline
 So $2y=V_1-V_2, y=\frac{V_1-V_2}{2}$\newline
 and so $x=y+V_2=\frac{V_1-V_2}{2}+V_2=\frac{V_1+V_2}{2}$\newline
-Thus $(V_1,V_2)=(\frac{V_1+V_2}{2},\frac{V_1+V_2}{2})+(\frac{V_1-V_2}{2},\frac{V_1-V_2}{2})$ and so we denoted that $W_1+W_2=V$\newline\newline
+Thus $(V_1,V_2)=(\frac{V_1+V_2}{2},\frac{V_1+V_2}{2})+(\frac{V_1-V_2}{2},\frac{V_2-V_1}{2})$ and so we denoted that $W_1+W_2=V$\newline\newline
 
 # Linear Combination of Vectors\newline
 
@@ -71,16 +71,22 @@ $F_{even}[X]=${$P(X)\in F[X]:P(X)=a_0+a_2X^2+a_4X^4+...+a_{2n}X^{2n}, a_0,a_2,a_
 Show that $W_1=F_{odd}[X],W=F_{even}[X]$ are subspaces of $F[X]$ and that $F[X]=W_1+W_2$\newline
 **Proof:**(exercise)\newline\newline
 
+(a) As long as set S contains all polynomials of X which degree $\le n$, and F[X] is the set of all polynomials in "undeterminate" X over the field F. F[X] can be written as a linear combination of S, where $F[X]=aS$. where $a=${$a_1,a_2....a_n$}$\in F$\newline
+
+(b) For $F_{odd}[X]$, assume $A(X)$ and $B(X)$ are subspace of $F_{odd}[X]$ where $A(X)=${$ca_1X+ca_3X^3+ca_5X^5+...$} and $B(X)=da_1X+da_3X^3+da_5X^5+...$ and $A(X)+B(X)=(c+d)a_1X+(c+d)a_3X^3+(c+d)a_5X^5+...\in F_{odd}[X]$. Also $rA(X) = rca_1X+rca_3X^3+rca_5X^5+...\in F_{odd}[X]$. This denote that $W_1$ is a subspace of $F[X]$\newline
+Similar with $W_2$\newline
+To show that a set V is equal to the sum of two subspaces W1 and W2, we must show that every element of V can be written as the sum of an element of W1 and an element of W2. Let P(X) be any polynomial in F[X]. We can write P(X) as $P(X) = P_o(X) + P_e(X)$ where $P_o(X) = a1X + a3X3 + ... + a2n+1X2n+1$ and $P_e(X) = a0 + a2X2 + ... + a2nX2n$. P_o(X) has only odd coefficients, and P_e(X) has only even coefficients. Thus, $P_o(X)$ is in $W1 = F_{odd}[X]$, and P_e(X) is in $W2 = F_{even}[X]$. Therefore, $P(X) = P_o(X) + P_e(X)$ can be written as the sum of an element of W1 and an element of W2, and thus every element of $F[X]$ can be written as such a sum. Therefore, $F[X] = W1 + W2$\newline\newline
+
 ## 6.10 Theorem\newline
 
 The span of any subset S of a vector space V is a subspace of V. Any subspace of V that contains S must contain $span(S)$\newline
-(e.e. if$W\in V$ subspace with $S\in W$ then $span(S)\in W$)\newline
+(I.e. if $W\in V$ subspace with $S\in W$ then $span(S)\in W$)\newline
 **Proof:**\newline
 We have to prove that if $x,y\in span(S)$ then $x+y\in span(S)$ and $cx\in span(S), \forall c\in F$\newline
 Since $x,y\in span(S)$, there exist $u_1,...,u_n\in S, v_1,...,v_n\in S$ and scalars $a_1,...a_n\in F, b_1,...,b_n\in F$ such that\newline
 $x=a_1u_1+...+a_mu_m$\newline
 $y=b_1v_1+...b_nv_n$\newline
-But the $xy=a_1u_1+...+a_mu_m+b_1v_1+...+b_nv_n$\newline
+But then $x+y=a_1u_1+...+a_mu_m+b_1v_1+...+b_nv_n$\newline
 So $x+y$ is itself a linear combination of $u_1,...u_m,v_1,...v_n\in S$, Thus $x+y\in span(S)$.\newline 
 Also, $cx=c(a_1u_1+...a_mu_m)=(ca_1)u_1+(ca_2)u_2+...+(ca_m)n_m\in span(S)$\newline\newline
 For the last part of Theom: if$W\in V$ is a subspace that contains S and $W\in span(S)$, then there exist $u_1,...,u_m\in S$ and $a_1,...,a_m\in F$ such that $W=a_1u_1+...+a_mu_m$. Since $W$ is a subspace and $u_1+...+u_m\in S\in W$, we have $a_1u_1+...+a_mu_m\in W$. Thus $w\in W$ showing that $span(S)\in W$.

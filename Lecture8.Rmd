@@ -1,0 +1,85 @@
+---
+title: "Math115A 1/27 notes"
+author: "Vincent"
+date: "2023-01-27"
+output: pdf_document
+---
+
+We talked about how important it is to identify subsets S of a vector space V that generate (span) V and are in some scalar "minimal" (or most efficient) with this property.\newline
+Today we'll study more in depth such sets, moving that such minimal generating sets" S are automation linearly independent, and have the remarkable property that any vector in V can be uniquely written as a linear combination of vectors in S. We'll call such S, basis for V\newline\newline
+
+## 8.1 Definition\newline
+
+A linearly independent subset S of a vector space V that generates (spans) V is called a basis for V.\newline\newline
+
+## 8.2 Example\newline
+
+Let $V\in \mathbb{R}^3$ and $S=${$(1,0,0),(0,1,0),(0,0,1)$} Then S is a basis for V.\newline
+
+Indeed: we already showed that $(1,0,0),(0,1,0),(0,0,1)$ are linearly independent vectors in $\mathbb{R}$. And if $v=(a,b,c)\in \mathbb{R}^3$ is a arbitary vector, then $v=a(1,0,0)+b(0,1,0)+c(0,0,1)$, Thus, S spans V as well\newline
+
+## 8.3 Exercise\newline
+
+Let $V=\mathbb{M}_{2\times 2}(R)$ and consider the set $S=${$\begin{pmatrix}1&0\\0&0\end{pmatrix},\begin{pmatrix}0&1\\0&0\end{pmatrix},\begin{pmatrix}0&0\\1&0\end{pmatrix},\begin{pmatrix}0&0\\0&1\end{pmatrix}$} Show that S is a basis for V.\newline
+**Solution: **\newline
+we already showed in an exercise on Monday (6.13) That S spans V if we would have $a\begin{pmatrix}1&0\\0&0\end{pmatrix}+b\begin{pmatrix}0&1\\0&0\end{pmatrix}+c\begin{pmatrix}0&0\\1&0\end{pmatrix}+d\begin{pmatrix}0&0\\0&1\end{pmatrix}=0$\newline
+Then this entails $\begin{pmatrix}a&b\\c&d\end{pmatrix}=\begin{pmatrix}0&0\\0&0\end{pmatrix}$ so a=0,b=0,c=0,d=0 showing that S is linear independent.\newline\newline
+
+## 8.4 Example\newline
+
+if F is a field and $V=F[X]$ is the vector space over F of all polynomials in undetermined X and coefficients in F then $S=${$1,X,X^2,X^3,...$} is a basis for V.\newline
+
+indeed, we already showed that $span(S)=V$ if $a_0,a_1,...\in F$ so that $a_01+a_1X+a_2X^2+...+a_nX^n=0$ then by the definition of the polynomials we must have $a_0=0,a_1=0,...a_n=0$ showing that S is linear independent as well\newline\newline
+
+## 8.5 Theorem\newline
+
+Let V be a vector space. A set $S=${$v_1,...,v_n$}$\in V$ is a basis for V iff any vector $v\in V$ can ve uniquely expressed as a linear combination of elements in S, i.e., there exist unique scalars $c_1,c_2,...,c_n\in F$ such that $v=c_1v_1+c_2v_2+...+c_nv_n$\newline
+**Proof:**\newline
+if $S=${$v_1,...v_n$} is a basis for V, $span(S)=V$, so if $v\in V$ is an arbitrary vector in V, then there exist $c_1,...c_n\in F$ such that $v= \Sigma^n_{i=1}$ if $a_1,...,a_n\in F$ are other scalars such that $v=\Sigma^n_{i=1}a_iv_i$ as well then $\Sigma^n_{i=1}c_iv_i=\Sigma^n_{i=1}v_ia_i$ so by cancellation then we get $\Sigma^n_{i=1}c_iv_i-\Sigma^n_{i=1}a_iv_i=0$ which using assure & commutativity of addition + distributivity of scalar multiplication gives $(c_1-a_1)v_1+(c_2-a_2)v_2+...+(c_n-a_n)v_n=0$ But since $S=${$v_1,...,v_n$} is a basis, the vectors $v_1,...v_n$ are linear independent, so this implies all coefficients $c_i-a_i$ in $(c_1-a_1)v_1+(c_2-a_2)v_2+...+(c_n-a_n)v_n=0$. So we showed v can be expressed in only one way as a linear combination of $v_1,...,v_n$\newline
+
+If any $v\in V$ can expressed in a unique way as linear combination of $S=${$v_1,...v_n$}, Then in particular $span(S)=V$ if we would have $c_1v_1+c_2v_2+...+c_nv_n=0$ for some $c_1,...,c_n\in F$, Then by uniqueness, since we also have $0*v_1+0*v_2+...+0*v_n=0$ it follows that $c_1=0,c_2=0,...c_n=0$ thus {$v_1,...,v_n$} linearly independent so S is a basis.\newline\newline
+
+## 8.6 Theorem\newline
+
+Let S be a finite subset of the vector space V. if $span(S)=V$(i.e. if S generate V) then there exist a subset $S' \in S$ such that $S'$ is a basis for V\newline
+**Proof:**\newline
+If $S=${$0$} then $span(S)=${$0$} so $V=${$0$} and S is a basis for V\newline
+
+IF S contains at least one non-zero element, say $u_1\ne 0$, then {$u_1$} is linearly independent we then continue to choose $u_2,...,u_k$ in S so that $u_1,...,u_k$ are linearly independent, write this is no longer possible (Note that this must be the case, because S is finite)\newline
+This happens if either we have exhausted all S, i.e. if\newline
+(a) {$u_1,..,u_k$}, or if\newline
+(b) any $u\in S$ that's not among $u_1,...u_k$ is so that $u_1,...u_k$ u is linearly dependent\newline
+in case we have (a), it means $S=${$u_1,...u_k$} is linear independent and since we also have $span(S)=V$, it follows that S itself is a basis for V and we are done.\newline
+In case we have (b), it means there exis tscalars $c_1,c_2,...c_k,c,$ not all equal to 0, such that $c_1u_1+c_2u_2+...+c_ku_k+cu=0$ if $c=0$, then it would follow that $c_1u_1+...+c_ku_k=0$ with  $c_1,c_2,...c_k$ not all equal to 0, contradicting the fact that {u_1,...u_n} is linear independent thus, $c\ne 0$ and then from $c_1u_1+c_2u_2+...+c_ku_k+cu=0$ we deduce $u=-\frac{c_1}{c}u_1-\frac{c_2}{c}u_2-...-\frac{c_k}{c}u_k$ showing that $u\in span(${$u_1,...u_k$}$)$ Thus, in case (b), we showed that the set $S'=${$u_1,...u_k$}$\in S$ is linear independent and any $u\in S-{u_1,...,u_k}$ is in $span(S')$ so $span(S')$ contains $u_1,...u_k$ and call $S-${$u_1,...u_k$}, so $S\in span(S')$ Since $span(S)=V$, by (Theom 6.6 or Theom 7.8), it follows that $span(S')$ contains all $span(S)$ thus $span(S')=V$(because $span(S)=V$) so $S'$ is lieanr independent & $span(S')=V$ so $S'\in S$ is a basis for V.\newline\newline
+
+## 8.7 Corallery\newline
+
+If V contains a finite subset $S\in V$ that generates V, i.e. $span(S)=V$, then V has a finite basis\newline\newline
+
+## 8.8 Example\newline 
+
+Here is a  concrete example showing how the method of finalizing a basis $S'$ as a subset of a generating set $S\in V$ works:\newline 
+Let $S=${$(1,-1),(-1,1),(0,2),(3,0)$}$\in \mathbb{R}^2$. Show that there exists $S'\in S$ such that $S'$ is a basis for $\mathbb{R}^2$\newline
+**Solution**\newline
+Since S contains non-zero vectors we can state by choosing $n_1=(1,-1)\in S$. Then we look at the 2'nd vector $(-1,1)$ in S. We see that $(-1,1)=-1*(1,-1)$, i.e.$(-1,1)=-n_1$ so $(-1,1)$ is not linear independent of $u_1$. We then take the 3'rd vector in S, $(0,2)$. If $a(1,-1)+b(0,2)=0$. Then $(a,-a+2b)=(0,0)$ $a=0$ and $-0+2b=0$ so $b=0$ as well Thus $u_2=(0,2)\in S$ is linear independent of $u_1$. So we can take add $u_2$ to our linear independent subset $S'$ of S. So by now we have $u_1=(1,-1),u_2=(0,2)\in S'$. We see that in fact $span${$u_1,u_2$} and we can stop and canclude that $S'=${$u_1,u_2$}$=${$(1,-1),(0,2)$}$\in S$ is a basis for $\mathbb{R}^2$\newline\newline
+
+## 8.9 Theorem (the so-called replacement theorem)\newline
+
+Let V be a vector space. Assume $G\in V$ is a subset with n vectors that generatesV, i.e. $span(G)=V$ if $L\in V$ is a linearly independent subset of V with m vectors, then $m\le n$ and there exist a subset $H\in G$ containing $n-m$ vectors such that $L \cup V$ generate V\newline
+**Proof**\newline
+We prove this by induction over m (i.e. over the # of elements in then linear independent set L)\newline
+if $m=0$, this means L has 0 many elements, i.e. $L\ne 0$ and we can just take $H=G$, which satisfies the required conditions.\newline
+Suppose now that the statement holds true for some $m\ge 0$. We then want to show that the statement holds true for $m+1$ as well.\newline
+So let $L=${$v_1,...v_{m+1}$} be linear independent subset of V. By Theom 7.7 any subset of L is linear independent, so {$v_1,...v_m$} is linear independent by induction, since we have that the statement of thn is true for m, it follows that $m\le n$ and that there exist {$u_1,...u_{n-m}$}$\in G$ such that {$v_1,...v_m$}$\cup${$u_1,...u_{n-m}$} spaces V. So in particular, $v_{m+n}$ can be expressed as a linear combination\newline
+$v_{m+1}=a_1v_1+...a_mv_m+b_1u_1+...+b_{n-m}u_{n-m}$ Now notice that in fact we must have $n-m\ge 1$, or else we would have $v_{m+n}=a_1v_1+...+a_mv_m+0$ which contradicts the fact that $L=${$v_1,...,v_m+1$} is linear independent. In other words, we must gave $n\ge m+1$. Also, In $v_{m+1}=a_1v_1+...a_mv_m+b_1u_1+...+b_{n-m}u_{n-m}$ we must have that some $b_i$ are non-zero. say $b_1\ne 0$, which allows us to solve in $v_{m+1}=a_1v_1+...a_mv_m+b_1u_1+...+b_{n-m}u_{n-m}$ for $u_1$:$u_1=(-\frac{a_1}{b_1})v_1+(-\frac{a_2}{b_1})v_2+...+(-\frac{a_m}{b_1})v_m+\frac{1}{b_1}v_{m+n}+(-\frac{b_2}{b_1})u_2+...+(-\frac{b_{n-m}}{b_n})u_{n-m}$. Thus, if we take $H=${$u_2,...,u_{n-m}$} then $u_1\in span(L\cup H)$ by $u_1=(-\frac{a_1}{b_1})v_1+(-\frac{a_2}{b_1})v_2+...+(-\frac{a_m}{b_1})v_m+\frac{1}{b_1}v_{m+n}+(-\frac{b_2}{b_1})u_2+...+(-\frac{b_{n-m}}{b_n})u_{n-m}$. and since $v_1,...v_m$, $u_2,...,u_{n-m}$ are obviously in $span(L\cup H)$, we actually have that {$v_1,...v_m, u_1,...u_{n-m}$}$\in span(L\cup H)$ Since {$v_1,...v_m, u_1,u_2,...,u_{n-m}$} generates V, it follows that $span(L\cup H)=V$ with $H\in G$ being a subset that contains $(n-m)-1=n-(m+1)$ elements, showing that statement of this holds true for $m+1$
+
+
+
+
+
+
+
+
+
+
+
