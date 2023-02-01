@@ -37,7 +37,7 @@ Thus $(V_1,V_2)=(\frac{V_1+V_2}{2},\frac{V_1+V_2}{2})+(\frac{V_1-V_2}{2},\frac{V
 
 ## 6.4 Definition\newline
 Let V be a vector space over a field F and $S\in V$ a nonempty subset of V. A vector $v\in V$ is called a linear combination of vectors in S. If there exist a finite number of vectors $u_1,.....,u_n\in S$ and scalars $c_1,...,c_n\in F$ such that $v=c_1u_1+c_2u_2...+c_nu_n$\newline\newline
-We then also say that V is a linear combination of $u_1,...u_n$. The scalars $c_1,...c_n$ are called the coefficients of the linear combination. because $O_v=O_F*V, \forall V\in S\ne0$\newline
+We then also say that v is a linear combination of $u_1,...u_n$. The scalars $c_1,...c_n$ are called the coefficients of the linear combination. because $O_v=O_F*V, \forall V\in S\ne0$\newline
 **Note:** The vector $0\in V$ is a linear combination of any $S\in V$\newline
 
 ## 6.5 Example\newline

@@ -1,0 +1,19 @@
+---
+title: "Midterm 1 Review content"
+author: "Vincent"
+date: "2023-01-31"
+output: html_document
+---
+
+
+
+## 1.3 subspace
+
+To check if a subset is under a Field:\newline
+  (1) $0\in S$\newline
+  (2) closure under addition, $x+y\in S, x, y\in S$
+  (3) closure under multiplication, $cx\in S, x\in S, c\in F$
+  
+## 1.4 linear combination
+
+The span of a subspace is always a subspace itself

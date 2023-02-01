@@ -1,0 +1,152 @@
+---
+title: "Assign3"
+author: "Haojie Liu"
+date: "2023-01-31"
+output: pdf_document
+---
+
+Section 1.3: 10,11,13,17,20,22,23,25,30\newline
+
+Section 1.4: 12,13,14\newline
+
+Section 1.5: 6,10,19\newline
+
+## 1.3
+
+10. Prove that $W_1=${$(a_1,a_2,...,a_n)\in F^n:a_1+a_2+...+a_n=0$} is a subspace of $F^n$, but $W_2=${$(a_1,a_2,...,a_n)\in F^n:a_1+a_2+...+a_n=1$} is not.\newline
+
+**Proof:**\newline
+
+First of all, we want to check that if $0\in$ $W_1$ and $W_2$.\newline
+in $W_1$, we have $0+0+...+0=0$, $0\in W_1$\newline
+in $W_2$, we have $0+0+...+0=1$ where $0\notin W_2$ Therefore, $W_2$ is not a subspace of $F^n$\newline
+Also, in $W_1$, $c(u+v)=0,\forall u,v$  where $(u+v)\in W_1$ and $cu\in W_1$. Therefore, $W_1$ is a subset of $F^n$\newline\newline
+
+11. Is the set $W=${$f(x)\in P(F): f(x)=0$ or $f(x)$ has degree n} a subspace of $P(F)$ if $n\ge 1$? Justify your answer.\newline
+
+**Proof:**\newline
+
+For any $f(x)$ has a degree $\ge 1$, we all have $f(x)=0$ where $0\in P(F)$\newline
+To test the closure under addition: we have $f(x)=x, g(x)=-x+1$ where $f(x),g(x)\in W$, However, $f(x)+g(x)=x-x-1=-1$ where we have that $f(x)+g(x)\ne 0$ and it does not has a degree of n.
+Therefore, $W$ is not a subspace of $P(F)$ if $n\ge 1$\newline\newline
+
+13. Let S be a nonempty set and F a field. Prove that for any $s_0\in S$,{$f\in F(S,F):f(s_0)=0$}, is a subspace of F(S,F)\newline
+
+**Proof:**\newline
+
+We know that $f(s_0)=0, \forall s_0\in S$, means that $0\in${$f\in F(S,F):f(s_0)=0$}\newline
+To test the closure under addition: we assume $f(s_0),g(s_0)\in${$f\in F(S,F):f(s_0)=0$}, we have that $f(s_0)+g(s_0)=0+0=0$ where $f(s_0)+g(s_0)=0\in${$f\in F(S,F):f(s_0)=0$}\newline
+To test the closure under multiplication: $f(s_0)\in${$f\in F(S,F):f(s_0)=0$} and $c\in F$. we have that $cf(s_0)=c(0)=0\in$ {$f\in F(S,F):f(s_0)=0$}\newline
+Therefore, {$f\in F(S,F):f(s_0)=0$} is a subspace of F(S,F)\newline\newline
+
+17. Prove that a subset W of a vector space V is a subspace of V is and only if $W\ne \emptyset$ and, whenever $a\in F$ and $x,y\in W$ then $ax\in W$ and $x+y\in W$\newline
+
+**Proof:**\newline
+
+We already know that W is closure under addition and multiplication. In order to become a subspace of V, we need to have $0\in W$.
+If $W= \emptyset$, then $0\notin W$ and it is not consider as a subspace of V. by contradiction.
+If $W\ne \emptyset$, and $a\in F$ we can have that $0x=0\in W$ which can satisify all three conditions. 
+Therefore, W will consider as a subspace of V, if and only if $W\ne \emptyset$ and, whenever $a\in F$ and $x,y\in W$ then $ax\in W$ and $x+y\in W$.\newline\newline
+
+20. Prove that if W is a subspace of a vector space V and $w_1,w_2,...,w_n$ are in W, then $a_1w_1+a_2w_2+...+a_nw_n\in W$ for any scalar $a_1,a_2,...,a_n$.\newline
+
+**Proof:**\newline
+
+As long as W is a subspace of V, we can summarize that$0\in W$, for any element $w\in W, w_1+w_2\in W$ and $aw\in W,a\in F$. Therefore, $\forall a_1,a_2,...a_n\in F$, and $w_1,w_2,...w_n\in W$. We can conclude that $a_1w_1+a_2w_2+...a_nw_n\in W$.\newline\newline
+
+22. Let $F_1$ and $F_2$ be fields. A function $g\in F(F_1,F_2)$ is called an even function if $g(-t)=g(t)$ for each $t\in F_1$ and is called an odd function if $g(-t)=-g(t)$ for each $t\in F_1$. Prove that the set of all even function in $F(F_1,F_2)$ and the set of all odd functions in $F(F_1,F_2)$ are subspace of $F(F_1,F_2)$\newline
+
+**Proof:**\newline
+When $F_1$ and $F_2$ are fields, $0\in F_1, F_2$.
+For $F_1$:\newline
+closure under addition: $g(-t)+f(-t) = g(t)+f(t)=(g+f)(t)\in$ even function\newline
+closure under multiplication: $cg(-t)=cg(t)\in$ even function\newline
+For $F_2$:\newline
+closure under addition: $g(-t)+f(-t)=-g(t)-f(t)=(-g-f)(t)=-(g+f)(t)\in$ odd function\newline
+closure under multiplication: $cg(-t)=-cg(t)=(-c)g(t)\in$ odd function\newline
+Therefore, both the even and odd function are subspace for $F(F_1,F_2)$
+
+23. Let $W_1$ and $W_2$ be subspaces of a vector space V.
+  (a) Prove that $W_1+W_2$ is a subspace of V that contains both $W_1$ and $W_2$
+  (b) Prove that any subspace of V that contains both $W_1$ and $W_2$ must also contain $W_1+W_2$\newline
+  
+**Proof:**\newline
+
+  (a) $0\in W_1,W_2$, we have $0=0+0\in W_1+W_2$\newline
+      closure under addition: $u_1+u_2\in W_1$ and $u_1,u_2\in W_1$, $v_1+v_2\in W_2$ and $v_1,v_2\in W_2$ where $(u_1+u_2)+(v_1+v_2)\in W_1+W_2$\newline
+      closure under multiplication: $cu\in W_1, \forall c\in F, u\in W_1$, and $cv\in W_2, \forall c\in F, v\in W_2$ where $c(u)+c(v)=c(u+v)\in W_1+W_2$\newline
+      $W_1+0=W_1\in W_1+W_2$ and $0+W_2=W_2\in W_1+W_2$
+      Therefore $W_1+W_2$ is a subspace of V that contains both $W_1$ and $W_2$
+      
+  (b) We know that $W_1,W_2\in V$ and $W_1,W_2\in W_1+W_2$ Therefore, we will have that $W_1+W_2\in V$, any subspace of V that contains both $W_1$ and $W_2$ must also contain $W_1+W_2$\newline\newline
+  
+25. Let $W_1$ denote the set of all polynomials $f(x)$ in $P(F)$ such that in the representation $f(x)=a_nx^n+a_{n-1}x^{n-1}+...a_1x+a_0$, we have $a_i=0$ whenever $i$ is even. Likewise let $W_2$ denote the set of all polynomials $g(x)$ in $P(F)$ such that in the representation $g(x)=b_nx^m+b_{m-1}x^{m-1}+...+b_1x+b_0$, we have $b_i=0$ whenever $i$ is odd. Prove that $P(F)=W_1\bigoplus W_2$.\newline
+
+**Proof:**\newline
+
+for $f(x)$ we have that $a_i=0$ whenever i is even. which means that $f(x)$ is a function with only odd coefficient and odd degree polynomial.\newline
+for $g(x)$ we have that $b_i=0$ whenever i is odd. which means that $g(x)$ is a function with only even coefficient and even degree polynomial.\newline
+i.e. we have $f(x)=\Sigma^n_1a_{2n-1}x^{2n-1}$ and $g(x)=\Sigma^n_0a_{2n}x^{2n}$\newline
+$f(x)\bigoplus g(x)=\Sigma^n_1a_{2n-1}x^{2n-1}+\Sigma^n_0b_{2n}x^{2n}=b_0+\Sigma^n_1a_{2n-1}x^{2n-1}+b_{2n}x^{2n}=P(F)$\newline
+We do have all degree of terms polynomials in P(F) generate by direct sum of f(x) and g(x)\newline\newline
+
+30. Let $W_1$ and $W_2$ be subspaces of a vector space V. Prove that V is the direct sum of $W_1$ and $W_2$ if and only if each vector in V can be uniquely written as $x_1+x_2$, where $x_1\in W_1$ and $x_2\in W_2$\newline
+
+**Proof:**\newline
+
+We can assume that there is a different way to represent $v\in V$, in other word $v$ is not unique. Then we can have that $v=x_1+x_2=y_1+y_2,y_1\in W_1,y_2\in W_2$ where $y_1+y_2$ is another representation of $v$. Base on the equation we can have that $x_1-y_1=x_2-y_2$. To have this condition, the only vector belong to both side of the equation is $0\in W_1,W_2$. Which means that each vector in V can be uniquely written as $x_1+x_2$.\newline\newline
+
+## 1.4
+
+12. Show that a subset W of a vector space V is a subspace of V if and only if $span(W)=W$\newline
+
+**Proof: **\newline
+
+=> When W is a subspace of V, we will have $0\in W$ and it is closure under addition and multiplication. As long as W is a subspace of V, the all of the linear combination have to be inside of the subspace W. Where $span(W)=W$\newline
+<= If W contains all of its linear combination, where $span(W)=W$, and we can have that $0u=0, 0\in F,u\in W$ where W contains the zero vector. Therefore, subset W of a vector space V is a subspace of V if and only if $span(W)=W$\newline\newline
+
+13. Show that if $S_1$ and $S_2$ are subsets of a vector space V such that $S_1\subseteq S_2$, then $span(S_1)\subseteq span(S_2)$. In particular, if $S_1\subseteq S_2$ and $span(S_1)=V$ deduce that $span(S_2)=V$.\newline
+
+**Proof: **\newline
+
+$span(S_1)$ represent all linear combination of $S_1$ in vector space V. if $S_1\subseteq S_2$,in other word element belong in $S_1$ also belong in $S_2$, we can say that $S_2\subseteq S_1, span(S_1)=span(S_2)$ where $span(S_2)$ represents all of the linear combination of $S_2$ in vector space V.\newline
+If $span(S_1)=V$, where subset $S_1$ generates V, and $S_1\subseteq S_2$. we can alternatively say that $S_2$ also generates V, where $span(S_2)=V$.\newline\newline
+
+14. Show that if $S_1$ and $S_2$ are arbitrary subsets of a vector space v, then $span(S_1\cup S_2)=span(S_1)+span(S_2)$.\newline
+
+**Proof: **\newline
+
+$S_1,S_2\subset v$, and $S_1\ne S_2$. $span(S_1)$ represents all of the linear combination of $S_1$ where$span(S_1)\in v$ and similarly for $S_2\in v$.\newline
+LHS: $span(S_2\cup S_2)=span(S_1)+span(S_2)$, lets assume that vector $x\in span(S_2\cup S_2)$ or we can say that $x\in span(S_1)\cup span(S_2)$ which means that x can be produced in either $span(S_1)$ or $span(S_2)$. In other word, $x\in span(S_1)+span(S_2)$\newline
+RHS: $span(S_2\cup S_2)=span(S_1)+span(S_2)$, lets assume that vector $x\in span(x_1)+span(x_2)$ which tells us that x can be generate from the sum of two vectors. In other word, $x\in span(x_1\cup x_2)$. Therefore, $span(S_2\cup S_2)=span(S_1)+span(S_2)$.\newline\newline
+
+## 1.5
+
+6. In $M_{m\times n}(F)$, let $E^{ij}$ denote the matrix whose only nonzero entry is 1 in the $i$th row and $j$th column. Prove that {$E^{ij}:1\le i\le m, 1\le j\le n$} is linearly independent.\newline
+
+**Proof: **\newline
+
+With a matrix $A_{n\times m} = \begin{pmatrix}1&1&...&1\\1&1&...&1\\|&&&|\\1&1&...&1\end{pmatrix}$ the only way to make $A=0$ is to using scalar $cA=0,c=0$. Therefore, the matrix $E^{ij}$ is linear independent.
+
+10. Given a example of three linearly dependent vector in $R^3$ such that non of the three is a multiple of another.\newline
+
+**Answer: **\newline
+
+{$(1,0,1),(0,0,-1),(1,0,0)$}
+
+19. Prove that if {$A_1,A_2,...A_k$} is a linearly independent subset of $M_{m\times n}(F)$ then {$A^t_1,A^t_2,...A^t_k$} is also linearly independent.\newline
+
+**Proof: **
+
+We say that {$A_1,A_2,...A_k$} is a linearly independent when the only way to make $cA=0$ is to have all of the scalar $c=0$. for any $A^t$ we can write it in form of $A^{t-1}*A$, in other word, if we want $cA^t = c(A^{t-1})A=(cA^{t-1})A=0$, we can either have $c=0, A=0$ or $A^{t-1}=0$, As we assume that A is not a zero vector, then the only solution is that $c=0$\newline
+Therefore, {$A^t_1,A^t_2,...A^t_k$} is also linearly independent.
+
+
+
+
+
+
+
+
+
+

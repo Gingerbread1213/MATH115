@@ -74,7 +74,7 @@ Label the following statement as true/false with testifier. \newline
 Show that $S=${$\begin{pmatrix}1&1\\0&0\\0&0\end{pmatrix},\begin{pmatrix}0&0\\1&1\\0&0\end{pmatrix},\begin{pmatrix}0&0\\0&0\\1&1\end{pmatrix},\begin{pmatrix}1&0\\1&0\\1&0\end{pmatrix},\begin{pmatrix}0&1\\0&1\\0&1\end{pmatrix}$}$\in \mathbb{M}_{3\times 2}(\mathbb{R})$ is linearly dependent\newline
 **solution**:\newline
 In general, to state that $v_1,...,v_5$ are linear dependent/independent are has to solve the system of equation resulting from $c_1v_1+c_2v_2+c_2v_3+c_4v_4+c_5v_5=0$ with the unknowns $c_1,c_2,...,c_5$. if we gets that the only solution is when $c_1=c_2=...=c_5=0$ then {$v_1,...,v_5$} linear independent if we gets solve other solutions where solve $c_i\ne 0$, then linear dependent\newline
-In our case though we solve right away that $v_1+v_2+v_3=\begin{pmatrix}1&1\\0&0\\0&0\end{pmatrix}+\begin{pmatrix}0&0\\1&1\\0&0\end{pmatrix}+\begin{pmatrix}0&0\\0&0\\1&1\end{pmatrix}=\begin{pmatrix}1&1\\1&1\\1&1\end{pmatrix}$ Thus $v_1+v_2+v_3=v_4+v_5$, in other words $v_1+v_2+v_3-v_4-v_5=0$ so {$v_1,...,v_5$} linear independent
+In our case though we solve right away that $v_1+v_2+v_3=\begin{pmatrix}1&1\\0&0\\0&0\end{pmatrix}+\begin{pmatrix}0&0\\1&1\\0&0\end{pmatrix}+\begin{pmatrix}0&0\\0&0\\1&1\end{pmatrix}=\begin{pmatrix}1&1\\1&1\\1&1\end{pmatrix}$ Thus $v_1+v_2+v_3=v_4+v_5$, in other words $v_1+v_2+v_3-v_4-v_5=0$ so {$v_1,...,v_5$} linear dependent
 
 
 

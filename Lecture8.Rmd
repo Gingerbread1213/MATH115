@@ -65,7 +65,7 @@ Since S contains non-zero vectors we can state by choosing $n_1=(1,-1)\in S$. Th
 
 ## 8.9 Theorem (the so-called replacement theorem)\newline
 
-Let V be a vector space. Assume $G\in V$ is a subset with n vectors that generatesV, i.e. $span(G)=V$ if $L\in V$ is a linearly independent subset of V with m vectors, then $m\le n$ and there exist a subset $H\in G$ containing $n-m$ vectors such that $L \cup V$ generate V\newline
+Let V be a vector space. Assume $G\in V$ is a subset with n vectors that generatesV, i.e. $span(G)=V$ if $L\in V$ is a linearly independent subset of V with m vectors, then $m\le n$ and there exist a subset $H\in G$ containing $n-m$ vectors such that $L \cup H$ generate V\newline
 **Proof**\newline
 We prove this by induction over m (i.e. over the # of elements in then linear independent set L)\newline
 if $m=0$, this means L has 0 many elements, i.e. $L\ne 0$ and we can just take $H=G$, which satisfies the required conditions.\newline
