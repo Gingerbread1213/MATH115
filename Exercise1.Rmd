@@ -1,0 +1,7 @@
+df <- data.frame(
+  height = c( 62,  67,  72,  68,  66,  65),
+  weight = c(120, 140, 190, 165, 135, 160),
+  gender = c("F", "F", "M", "M", "M", "F"),
+  hair = c("Brown", "Black", "Blonde", "Black", "Brown", "Blonde")
+)
+print(df)

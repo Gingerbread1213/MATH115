@@ -1,0 +1,74 @@
+---
+title: "Math115A 2/06 notes"
+author: "Vincent"
+date: "2023-02-07"
+output: pdf_document
+---
+
+Recall that we defined the notion of linear transformation from one vector space V to a vector space W, $T:V\to W$, when it satisfies $T(v_1+v_2)=T(v_1)+T(v_2),T(cv)=cT(v)\forall v_1,v_2,v\in V, \forall c\in F$\newline
+We also defined the null space (or kernel) of a linear $T:V\to W$ by $N(T)=${$v\in V: T(v)=0_w$} and range of T, by $R(T):${$T(v):v\in V$}\newline
+We proved in Theom 11.12 that $N(T),R(T)$ are subspace of V respectively W\newline\newline
+
+## 12.1 Theorem
+
+Let $V,W$ be vector spaces and $T:V\to W$ linear. If $S=${$v_1,...,v_m$}$\subset V$ is a basis for V, then $R(T)=span(T(S))=span${$T(v_1),T(v_2),...,T(v_n)$}\newline
+**Proof: ** We have $T(S)\subset T(V)=R(T)$ by the definitions, so $T(v_1),...T(v_n)\in R(T)$ and since R(T) is a subspace we get $span(${$T(v_1),...,T(v_n)$}$)\subset R(T)$.\newline
+If $w\in R(T)$ is a vector in the range of T, then there exists $v\in V$ such that $T(v)=w$. But V is spanned by {$v_1,...,v_n$} (because {$v_1,...v_n$} is a basis for V), so $\exists c_1,...,c_n\in F$ such that $v=\Sigma^n_{i=1}c_iv_i$ Thus $w=T(v)=T(\Sigma^n_{i=1}c_iv_i)=\Sigma^n_{i=1}c_iT(v_i)\in span${$T(v_1),...T(v_n)$}\newline
+
+## 12.2 Definitions
+
+Let $V,W$ be vector spaces and $T:V\to W$ linear if $N(T),R(T)$ are finite dimensional then we define the nullity of T, denoted nullity(T), to be the dimensional of N(T) and the rank of T, denoted rank(T), to be the dimension of R(T)\newline\newline
+So nullity(T)=dim(N(T)), rank(T)=dim(R(T))\newline
+
+## 12.3 Theorem (Dimension Theorem)
+
+Let $V,W$ be vector spaces and $T:V\to W$ linear. If V is finite dimensional then $nullity(T)+rank(T)=dim(V)$\newline
+**Proof: ** Let n denote the dimension of V and k then dimensional of $N(T)$, i.e. $n=dim(V), k=dim(N(T))$.\newline
+Let {$v_1,...,v_k$}$\subset N(T)$ be a basis for N(T). By corollary 11.3 {$v_1,...v_k$} can be extended to a basis $S=${$v_1,...v_k,v_{k+1},...v_n$} for V\newline\newline
+
+We'll show that $S_0=${$T(V_{k+1}),T(V_{k+2}),...,T(V_n)$}$\subset R(T) \subset W$ is a basis for R(T)\newline
+To see this, we need to show that the set $S_0$ spans R(T) and is linearly independent\newline
+Indeed, since $v_1,..v_k\in N(T)$ we have $T(v_1)=T(v_2)=...=T(v_k)=0$\newline
+Thus R(T) = span{$T(v_1),T(v_2),...,T(v_n),T(v_{k+1},...T(v_n)$}=span{$T(v_{k+1},...T(v_n))$}$=span(S_0)$\newline\newline
+To see that $S_0$ is linear independent assume $\Sigma^n_{i=k+1}c_iT(v_i)=0$ for some $c_i\in F$ using linearly of T we get $T(\Sigma^n_{i=k+1}c_iv_i)=0$ implying that $\Sigma^n_{i=k+1}c_iv_i\in N(T)$\newline
+Since {$v_1,...v_k$}$\subset N(T)$ is a basis for N(T) this implies $\exists c_1,..c_k\in F$ such that $\Sigma^k_{i=1}c_iv_i=\Sigma^n_{i=k+1}c_iv_i$\newline
+Thus $\Sigma^n_{i=1}(-c_i)v_i+\Sigma^n_{i=k+1}c_iv_i=0$ Since $S=${$v_1,..,v_k,v_{k+1},...v_n$} is a basis for V, this implies $c_i=0$ for all $i=1,2,...,n$ in particular $c_{k+1},...,c_n=0$\newline
+Showing that $S_0=${$T(v_{k+1}),...T(v_n))$} is indeed linearly independent\newline
+Thus, $S_0$ is a basis for $R(T)$ and so $dim(R(T))$ equals the number of elements in $S_0$, whihc is $n-k$\newline
+Thus $dim(V)=k+(n-k)=dim(N(T))+dim(R(T))$\newline
+
+## 12.4 Theorem
+
+Let $V,W$ be vector spaces and $T:V\to W$ linear. Then T is one to one iff N(T)={$0$}\newline
+**Proof: ** if T is one to one and $v\in N(T)$, then $T(v)=0_w$ implies $v=0_v$, so we get $N(T)=${$0$}\newline
+If conversely $N(T)=${$0$} and we have $T(v_1)=T(v_2)$ for some $v_1,v_2\in V$, then $0_w=T(v_1)-T(v_2)=T(v_1-v_2)$ so $v_1-v_2\in N(T)=${$0$}, Thus $v_1-v_2=0_v$, implying $v_1=v_2$, Thus showing T is one to one.
+
+## 12.5 Theorem
+
+Let $V,W$ be finite dimensional vector space with $dim(V)=dim(W)$ and $T:V\to W$ linear. Then the following conditions are equivalent:\newline
+a) T is one to one (T is injective)\newline
+b) T is on to (T is surjective)\newline
+c) rank(T)=dim(V)\newline
+**Proof: ** From dimension Theom 12.3 we have $rank(T)+nullity(T)=dim(V)$ we showed in Theom 12.4 that T is one to one iff N(T)={$0$} iff $nullity(T)=0$\newline
+Thus, by $rank(T)+nullity(T)=dim(V)$ we get T one to one iff $rank(T)=dum(V)$ so (a) is equivalent to (c)\newline
+On the other hand, we have T is onto iff $R(T)=W$ iff $rank(T)=dim(W)$ and from $rank(T)+nullity(T)=dim(V)$ we get $dim(W)=dim(V)$ iff $nullity(T)=0$ i.e. iff T is one to one\newline
+Thus shows that (b) is equivalent to (a), so all together (a)(b)(c) are all equivalent\newline\newline
+
+## 12.6 Exercise
+
+Show that $T:R^3\to R^3$ defined by $T(a,b,c)=(a-b,2c)$ is onto\newline
+**Solution** It is easier to see what the kernel of T is: $N(T)=${$(a,b,c)\in \mathbb R^3:T(a,b,c)=0$} which by the definition of T means $(a,b,c)\in N(T)$ iff $a-b=0,2c=0$ so $c=0$ and $a=b$ so $N(T)=${$(a,a,0):a\in \mathbb R$}. Thus $nullity(N(T))=1$ so by 12.3 $3=dim, \mathbb R^3=dim(N(T))+dim(R(T))=1+dim(R(T))$. SO $dim(R(T))=3-1=2$
+
+
+
+
+
+
+
+
+
+
+
+
+
+

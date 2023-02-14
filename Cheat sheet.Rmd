@@ -1,0 +1,102 @@
+---
+title: "Cheat Sheet"
+author: "Vincent"
+date: "2023-02-09"
+output: pdf_document
+---
+getwd() # Outputs the current working directory\newline
+[1] "/Users/mike"\newline
+setwd("~/Desktop") # Changes working directory to desktop\newline
+rm() #remove objects rm(list = ls()) remove everything\newline
+objects() & ls()#gives me a list of all object\newline
+We can't name a object start with a number\newline
+46 %% 7 = 4\newline
+46 %/% 7 = 6\newline
+order of operations:\newline
+1. Parentheses (or Brackets)\newline
+2. Exponents\newline
+3. Multiplication and Division\newline
+4. Addition and Subtraction\newline\newline
+
+c(TRUE, FALSE, TRUE, T, F) # This is a logical vector\newline
+The mode() function inputs an object and outputs the type (or mode) of the object.\newline
+the mode hierarchy:\newline
+logical < numeric < character\newline\newline
+
+seq(0, 5) # numbers increase by 1\newline
+[1] 0 1 2 3 4 5\newline
+seq(0, 10, by = 2) # numbers now increase by 2\newline
+[1] 0 2 4 6 8 10\newline
+seq_len(8)\newline
+[1] 1 2 3 4 5 6 7 8\newline
+seq_along(c(1, 3, 5, 7, 9))\newline
+[1] 1 2 3 4 5\newline
+running_times[] = running_times\newline
+
+• sum(x) computes the sum of the values of x\newline
+• prod(x) computes the product of the values of x\newline
+• mean(x) computes the mean of x\newline
+• sd(x) computes the standard deviation of x\newline
+• var(x) computes the variance of x\newline
+• median(x) computes the median of x\newline
+• IQR(x) computes the interquartile range of x\newline
+• min(x) computes the minimum value of x\newline
+• max(x) computes the maximum value of x\newline
+• range(x) computes the minimum and maximum values of x • diff(x) computes consecutive differences of x\newline
+• cumsum(x) computes the cumulative sum of x\newline
+• cumprod(x) computes the cumulative product of x\newline
+• sort(x) orders the values of x (increasing order by default) • fivenum(x) computes the five-number summary of x\newline
+• summary(x) computes a few summary statistics of x\newline
+
+The any() function inputs a logical vector and outputs TRUE if any of the values is TRUE. \newline
+The all() function inputs a logical vector and outputs TRUE if all of the values are TRUE.\newline
+The identical() function tests whether two R objects are exactly identical objects\newline
+is.na(), \newline
+is.nan(), \newline
+is.null()\newline
+which() function inputs a logical vector and outputs a numeric vector of the indices (or positions) of\newline
+the TRUE values.\newline
+
+The && and || operators are similar to their respective & and | counterparts but with two key differences.\newline
+The && and || operators are not vectorized.\newline
+The && and || operators use short-circuit evaluation: They will evaluate expressions from left to right and only evaluate the right expression if necessary. \newline
+
+The stop() function stops the execution of the current expression and throws an error message.\newline
+stop("The input has NA values!")\newline
+The warning() function throws a warning message but does not stop the execution of the current expression.\newline
+A related function is the message() function, which is used for printing diagnostic messages.\newline
+
+
+fib1 <- 1 # Initialize fib1\newline
+fib2 <- 1 # Initialize fib2\newline
+ 
+full_fib <- c(fib1, fib2)\newline
+
+while (fib1 + fib2 < 500) {\newline
+old_fib2 <- fib2\newline
+fib2 <- fib1 + fib2\newline
+full_fib <- c(full_fib, fib2)\newline
+fib1 <- old_fib2\newline
+}\newline
+full_fib\newline
+
+repeat{\newline
+ Commands go here\newline
+  if (condition) { break\newline
+}\newline
+}\newline\newline
+
+We have now learned several additional operations in R to consider. The combined order of operations is: \newline
+• Parentheses ()\newline
+• Exponents ˆ\newline
+• Unary operators -, + (changing the sign of a number, e.g. -1)\newline
+• Colon operator : (making a regular sequence)\newline
+• Infix operators of the form %xyz% (e.g., mod %%, integer division %/%, or matrix multiplication %*%) \newline
+• Multiplication and Division *, /\newline
+• Addition and subtraction +, -\newline
+• Relational operators >, >=, <, <=, ==, !=\newline
+• Logical negation !\newline
+• Logical AND &, &&\newline
+• Logical OR |, ||\newline
+• Assignment operator <-\newline
+

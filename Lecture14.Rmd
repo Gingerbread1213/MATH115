@@ -1,0 +1,50 @@
+---
+title: "Math115A 2/10 notes"
+author: "Vincent"
+date: "2023-02-10"
+output: pdf_document
+---
+
+The matrix representation of the zero linear transformation $0:V\to W$ with respect to any ordered basis $\beta,\gamma$ is $[0]^\gamma_\beta=(0)_{ij}\in M_{m\times n}(F)$ so the matrix that has all entries $=0$\newline
+
+If $V=W$ and $\beta$ is an ordered basis for $V$ then the identity linear transformation $I_V:V\to V$ defined by $I_V(x)=x, \forall x\in V$ has matrix rep $[I_V]^\beta_\beta=\begin{pmatrix}1&&0\\&1&\\0&&1\end{pmatrix}\in M_{m\times n}$\newline
+
+## 14.1 Definition
+
+Let $T,U:V\to W$ be two functions between vector spaces $V,W$ over some field F. We define $T+U:V\to W$ by $(T+U)(v)=T(v)+U(v),\forall v\in V.$ Also, if $c\in F$, we define $cT:V\to W$ by $(cT)(v)=cT(v),\forall v\in V$\newline
+
+## 14.2 Theorem
+
+Let $V,W$ be vector spaces and let $T,U:V\to W$ linear.\newline
+(a) $T+U$ and $cT$ are linear, $\forall c\in F$\newline
+(b) The set $\mathbb L(V,W)$ of linear transformations from V to W, with the operation of addition $T+U$ and scalar multiplication $cT$ defined in 14.1, is a vector space over the field F.\newline
+**Proof: **\newline
+(a). if $x,y\in V$ Then $(T+U)(x+y)=T(x+y)+U(x+y)=T(x)+T(y)+U(x)+U(y)=(T+U)(x)+(T+U)(y)$\newline
+Thus showing that $T+U$ preservers addition similarly $(T+U)(cx)=T(cx)+U(cx)=cT(x)+cU(x)=c(T+U)(x)\forall c\in F$ So $T+U: V\to W$ is a linear. Similarly one shows that $cT:V\to W$ is linear\newline\newline
+(b) With the operations of addition and scalar multip. in (a) in defining 0 to be the zero transformation, that takes any $v\in V$ to $0_w$, its very easy to check all VS1-8 axioms.\newline
+
+## 14.3 Notation
+
+As already mentioned in 14.2 proof (b), we denote by $\mathbb Z(V,W)$. The set of linear transformations from V to W endowed with vector space structure  defined in Theom 14.2\newline
+When V=W, denote $\mathbb L:(V,V)=\mathbb L(V)$\newline
+
+## 14.4 Theorem
+
+Let V, W be linear dim vector spaces with ordered basis $\beta$, resp $\gamma$.\newline
+If $T,U:V\to W$ are linear, Then:\newline
+(a) $[T+U]^\gamma_\beta=[T]^\gamma_\beta+[U]^\gamma_\beta$\newline
+(b) $[cT]^\gamma_\beta=c[T]^\gamma_\beta, \forall c\in F$\newline
+
+## 14.6 Corollary
+
+Let V, W be finite dim vector and $\beta,\gamma$ ordered basis for V, resp W.\newline
+The transformation from $\mathbb L(V,W)$ to $M_{m\times n}(F)$ defined by\newline
+$T\to [T]^\gamma_\beta$ is linear and one to one\newline
+**Proof: **\newline
+We already established linearity of this transformation and showed that $[T]^\gamma_\beta=[U]^\gamma_\beta$ then $T+U$, so one to one.
+
+
+
+
+
+

@@ -8,9 +8,10 @@ output: pdf_document
 3.1 Definition\newline
 A field F is a set on which one has two operations +, $*$, called addition and multiplication, are defined so that for each x,y $\in$ F corresponds a unique element in F denoted x+y and a unique element denoted $x * y$ such that the following properties are satisfied for all elements a, b, c $\in$F: \newline
 (F1) $a+b = b+a$, $a*b=b*a$\newline\newline
-(F2) $(a+b)+c =a+(b+c); (a$*$b)$*$c =a$*$(b$*$c)\newline\newline
+(F2) $(a+b)+c =a+(b+c); (a*b)*c=a*(b*c)$\newline\newline
 (F3) There exist distinct elements 0 and 1 in F such that 0+a=a and 1$*$a = a, $\forall$a $\in$F\newline\newline
-(F4) For each a$\in$F and each b$\in$F, b!=0 there exist elements c$\in$F, d$\in$F such that a+c=0, b*d=1
+(F4) For each a$\in$F and each b$\in$F, b!=0 there exist elements c$\in$F, d$\in$F such that a+c=0, b*d=1\newline\newline
+(F5) $a*(b+c)=a*b+a*c$ distributivity of multiplication.\newline\newline
 
 The element x+y called the sum of x&y x$*$y called the product of x&y\newline
 The element 0 is called the identity element for addition\newline

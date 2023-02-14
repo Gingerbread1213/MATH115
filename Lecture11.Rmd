@@ -1,0 +1,114 @@
+---
+title: "Math115A 2/03 notes"
+author: "Vincent"
+date: "2023-02-03"
+output: pdf_document
+---
+
+Recall that over the last two lectures L9&L10 we defined the notice of basis and dimension of a vector space:\newline\newline
+Given a vector space V, a basis for V is a subset $S\subset V$ with the properties that S is linearly independent and generates V\newline\newline
+We proved that if V is finitely generated (i.e., if $\exists S\subset V$ finite such that $span(S)=V$) then V has a finite basis and that all basis of V have the same number of elements. We called this common number the dimension of V denote $dim(V)$\newline\newline
+We now enumerate several more consequences of the replacement theorem\newline\newline
+
+## 11.1 Corollary
+
+Let V be a finite dimensional vector space with $dim(V)=m$\newline
+1. if $S\subset V$ is a set with m element that generate V, then $m\ge n$\newline
+2. if $S\subset V$ has n elements and $span(S)=V$, then S is a basis from V\newline
+3. if $S\subset V$ has m elements and S is linearly independent and has n elements then S is a basis\newline
+4. Any linearly independent subset S of V can be extended to a basis of V, i.e. $\exists S' \subset V$ subset that contains S such that S' is a basis for V.\newline
+
+**Proof: ** We already discussed these consequences of the replacement theom on Monday L9.\newline
+
+## 11.2 Theorem
+
+Let V be a finite dimensional vector space and $W\subset V$ a subspace. Then W  is finite dimensional and $dim(W)<dim(V)$. Moreover, if $dim(W)=dim(V)$ then $W=V$\newline
+**Proof: ** Denote $dim(V)=n$ and let {$w_1,...w_k$}$\subset W$ be a linearly independent subset of W. By 11.1, this set can be extended to a basis of V, thus $k\le n$. If $span(${$w_1,...w_k$}$)\ne W$, then set $w_{k+1}\in W -$$span(${$w_1,...w_k$}$)$. We claim that {$w_1,...w_k,w_k+1$} follows linearly independent indeed, because if $\Sigma^{k+1}_{i=1}c_1w_1=0$ then for sure $c_{k+1}=0,$ or else we get $w_{k+1}=\Sigma^k_{j=1}(-\frac{c_j}{c_{k+1}})w_j\in span${$w_1,...,w_k$}, contradiction. Thus $\Sigma^{k+1}_{i=1}c_1w_1=0$ implies $\Sigma^{k}_{i=1}c_1w_1=0$, whihc by linear independent of {$w_1,...,w_k$} implies $c_1=c_2=...=c_k=0$.\newline
+So indeed {$w_1,...,w_{k+1}$} follows linear independent.\newline\newline
+Thus, since any linear independent subset of W has $\le n$ many elements with n finite, we can continues the process of choosing more and more linear independent vectors $w_1,...,w_k$ in W. But since $k\le n$ and n is finite this process must end after finitely many steps, say m steps, assume we got a linear independent {$w_1,...,w_m$} to span W, and from the above we have $m\le n$. Since span{$w_1,...w_m$}$=W$ and {$w_1,...w_m$} linear independent, {$w_1,...w_m$} is a basis for W. Thus $dim(W)=m\le n=dim(V)$\newline\newline
+if in addition $dim(W)=dim(V)$ then by 11.1.3 we must have that {$w_1,...w_m$} is also a basis of V thus $W=V$\newline
+
+## 11.3 Corollary
+
+If V is finite dim vector space and $W\subset V$ subspace then any basis for W can be extended to a basis for V\newline
+**Proof: ** By Theom 11.2 we know that $m=dim(W)\le n$. Let {$w_1,...w_m$}$\subset W$ be a basis for W in particular they are linear independent and by 11.1.4 we can extend this set V to a basis of V.\newline\newline\newline
+
+# Linear Transformations Between Vector Spaces (2.1)
+
+## 11.4 definition 
+
+Let $V,W$ be vector spaces over the field F. A function $T:V\to W$ satisfying to properties\newline
+  a) $T(x+y)=T(x)+T(y), \forall x,y\in V$\newline
+  b) $T(cx)-cT(x), \forall x\in V, c\in F$\newline
+  is called a linear transformation from V to W\newline\newline
+
+We often just use the term linear, as an adjective/noun to call such function $T:V\to W$\newline\newline
+
+## 11.5 Remarks
+
+if $T:V\to W$ is linear, as above, then $T(0_V)=0_W$. Indeed, because by (b) above we have $T(0*0_v)=0T(0_V)$\newline
+$2^o:$ $T(x-y)=T(x)-T(y),\forall x,y\in V$\newline
+indeed $T(x-y)=T(x+(-y))=T(x)+T(-y)=T(x)+T((-1)y)=T(x)+(-1)T(y)=T(x)-T(y)$
+$3^o:$ $T(\Sigma^n_{i=1}c_1x_i)=\Sigma^n_{i=1}c_iT(x_i), \forall x_1,...x_n\in V, c_1,...c_n\in F$\newline
+Indeed, This is clear by applying (a), (b) repeatly\newline
+
+## 11.6 Example 
+
+Define $T: R^2\to R^2$ by $T(a,b)=(a,-b)$. Then T is linear, because on the one hand $T((a_1,b_1)+(a_2,b_2))=T((a_1+a_2,b_1+b_2))=(a_1+a_2,-b_1-b_2)$\newline
+on the other hand\newline
+$T(a_1,b_1)=(a_1,-b_1)$\newline
+$T(a_2,b_2)=(a_2,-b_2)$\newline
+So $T(a_1,b_1)+T(a_2,b_2)=(a_1,-b_1)+(a_2,-b_2)=(a_1+a_2,-b_1-b_2)$\newline
+Similarly, $T(c(a,b))=T(ca,cb)=(ca,-cb)=c(a,-b)=cT(a,b)$\newline
+
+## 11.7 Example
+
+$T:R^2\to R^2$ defined by $T(a,b)=(a,0)$ is linear\newline\newline
+
+Indeed, trivial to check:
+
+The transformation $T:R^2\to R^2$, $T(a,b)=(a,-b)$ in 12.6 is called the reflection of $R^2$ almost the x-axis and $T:R^2\to R^2, T(a,b)=(a,0)$. 12.7 is called the projection of $R^2$ on the x-axis\newline\newline
+
+## 11.8 Example
+
+Let V denote the set of all functions $f: \mathbb R\to \mathbb R$ that have derivative of any order. This is obviously a vector space over field $\mathbb R$ when endowed with usual addition of functions and multiplication of functions by scalars: if $f,g\in V$ then $(f+g)(t)=f(t)+g(t), t\in \mathbb R, (cf)(t)=cf(t)$\newline
+Define, $T:V\to V$ by $T(f)=f'$ (the derivative of f)\newline
+Then T is a linear transformation because of the linear properties of the derivation of functions:\newline
+$(f+g)'=f'+g', (cf)'=cf'.\forall f,g\in V,c\in \mathbb R$\newline
+Obs one effect denotes this vector space by $V=C^{\infty}(\mathbb R)$\newline
+
+## 11.9 Example
+
+Let $V=C(\mathbb R)$ the set of continuous functions $f:\mathbb R \to \mathbb R$. Then $C(\mathbb R)$ with the usual addition of functions and multiplication by scalars is a vector space. Let $a,b\in \mathbb R$, $a<b$. Then the function $T:C(\mathbb R)\to \mathbb R$ defined by $T(f)=\int^b_a f(t)dt$ is linear because of the known properties of the integral $\int_a^b(f+g)(t)dt=\int^b_af(t)dt+\int^b_ag(t)dt$, $\int^b_a(cf)(t)dt=c\int^b_af(t)dt$\newline
+
+## 11.10 Definition
+
+Let $V, W$ be vector spaces and $T:V\to W$ linear.\newline
+The null space of T (or kernel of T) is the set $N(T):=${$x\in V:T(x)=0$}\newline
+The range of T (or image of T) is the set $R(T):=${$T(x):x\in V$}\newline
+
+## 11.11 Examples
+
+The projection of $\mathbb R^2$ denote the x axis theom 12.7 defined by $T:\mathbb R^2\to \mathbb R^2$, $T(a,b)=(a,0),\forall (a,b)\in \mathbb R^2$\newline
+$N(T)=${$(0,b):b\in \mathbb R$} i.e. the y-axis\newline
+$R(T)=${$a,0:a\in \mathbb R$} i.e. the x axis\newline
+
+## 11.12 Theorem
+
+Let $V,W$ be vector space and $T:V\to W$ be linear. Then $N(T),R(T)$ are subspaces of V and respectively W\newline
+**Proof: ** Since $T(0_V)=0_W$ we have $0_V\in N(T)$. if $v_1,v_2\in N(T)$, i.e. $T(v_1)=0_W$,$T(v_2)=0_W$ Then $T(v_1+v_2)=T(v_1)+T(v_2)=0_w+0_w=0_w$, so $v_1+v_2\in N(T)$ if $v\in N(T)$ then $T(v)=0_W$ so if $c\in \mathbb R$ scalar then $T(cv)=cT(v)=0_w$ so $cv\in N(T)$. Similarly for R(T)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
