@@ -1,0 +1,38 @@
+---
+title: "MATH115A 2/08 notes"
+author: "Vincent"
+date: "2023-02-08"
+output: pdf_document
+---
+
+# Matrix Representaion of a Linear Transformation(2.2)
+
+up to now, we considered basis of a finite dim vector space V as a set of elements $S=${$v_1,...,v_n$}, where the order in which we take the vectors $v_1,...,v_n$ didn't matter. But we now want to take into consideration the order\newline
+
+## 13.1 Definition
+
+Let V be a finite dim vector space. An ordered basis for V is a basis of V with a specified order of its elements, i.e. it is a finite sequence $v_1,...,v_n$ of linearly independent vectors in V that span V.\newline
+We will still write it {$v_1,,,v_n$} but we will specify\newline
+
+## 13.2 Example
+
+In $V=\mathbb R^n$ we usually take basis $e_1=(1,0,...,0)$, $e_2=(0,1,0,...0),...,e_n=(0,0,...0,1)$. We then say {$e_1,...,e_n$} is a basis for $\mathbb R^n$ as a set, we can take it to be {$e_2,e_1,e_4,e_3,e_5,...,e_n$} as well, or any other re-ordering. It is still no some set, so some basis\newline
+
+## 13.3 Definition 
+
+Let $\beta =${$v_1,...,v_n$} be an ordered basis for a finite dim vector space V let $v\in V$ and $c_1,...,c_n\in F$ be the unique sca;ars such that $v=\Sigma^n_{i=1}c_iv_i$. we define the coordinate vector of V relative to the ordered basis $\beta$ by $[v]_{\beta}= \begin{pmatrix}c_1\\|\\c_n\end{pmatrix}\in F^n$ so it is a column m-tuple\newline
+
+## 13.4 Definition
+
+Let $V,W$ be finite dim vector spaces with ordered basis $\beta=${$v_1,...,v_n$} for V $\gamma=${$w_1,...w_m$} for W. Let $T:V\to W$ be linear. Notice that for each $j=1,2,...,n$ there exist unique scalars $a_{ij}\in F, i=1,...,m$ such that $T(v_j)=\Sigma^m_{i=1}a_{ij}w_i$, $j=1,...,n$\newline\newline
+We call the matrix $A\in M_{m\times n}(F)$ defined by $(A)_{ij}=a_{ij}$ the matrix representation of T with respect to the ordered basis $\beta$ and $\gamma$ we write $A=[T]^\gamma_\beta$
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,166 @@
+---
+title: "Assign7"
+author: "Vincent"
+date: "2023-02-27"
+output: pdf_document
+---
+
+from section 2.3 exercises: 16,18
+
+from section 2.4 exercises: 1 (a)-(e); 3, 6, 7, 14, 16
+
+from section 2.5 exercises: 1 (a)-(e) (so all of them); 2 (a) and (c); 4; 5. 
+
+
+## 2.3 
+
+### 16 Let V be a finite-dimensional vector space, and let $T:V\to V$ be linear.
+
+#### a) If $rank(T)=rank(T^2)$, prove that $R(T)\cap N(T)=${$0$}. Deduce that $V=R(T)\bigoplus N(T)$\newline
+To prove that $R(T) \cap N(T) = {0}$, we will assume that $v\in R(T)\cap N(T)$ and show that $v=0$.
+Since $v\in R(T)$, there exists a vector $u\in V$ such that $T(u)=v$.\newline
+Moreover, since $v\in N(T)$, we have $T(v)=T^2(u)=T(T(u))=T(v)=0$.\newline
+
+Now, since $T(u)=v$ and $T(v)=0$, we have $T(T(u))=0$, which means that $u\in N(T)$ (since $N(T)$ is the nullspace of $T^2$). Therefore, $u\in R(T)\cap N(T)$, which implies that $u=0$ (because $v$ and $u$ are linearly independent, and $\dim(R(T))+\dim(N(T))=\dim(V)$).\newline
+
+But then, $v=T(u)=0$, which shows that $R(T) \cap N(T) = {0}$.\newline
+
+To deduce that $V = R(T) \oplus N(T)$, we will show that $V = R(T) + N(T)$ and $R(T) \cap N(T) = {0}$, which implies that $V = R(T) \oplus N(T)$ by the direct sum theorem.\newline
+
+We have just shown that $R(T) \cap N(T) = {0}$, so it only remains to show that $V = R(T) + N(T)$.\newline
+
+Let $v\in V$. Then, since $T$ is a linear transformation from $V$ to $V$, we have $\dim(R(T))+\dim(N(T))=\dim(V)$, so there exist vectors $r\in R(T)$ and $n\in N(T)$ such that $v=r+n$.\newline
+
+To see this, let $u\in V$ be such that $T(u)=v$. Then, $T^2(u)\in R(T)$ (by definition of $R(T)$), and $T^2(u)=T(T(u))=T(v)$, so $T(v)\in R(T)$. Moreover, since $T(v)\in N(T)$ (by definition of $N(T)$), we have $T(v)=0$, which implies that $v=T(u)=T(u)+0\in R(T)+N(T)$.\newline
+
+Therefore, we have shown that $V = R(T) + N(T)$ and $R(T) \cap N(T) = {0}$, which implies that $V = R(T) \oplus N(T)$.\newline\newline
+
+#### b) Prove that $V=R(T^k)\bigoplus N(T^k)$ for some positive integer k\newline
+Since $V$ is finite-dimensional, we know that there exists a positive integer $k$ such that $\text{nullity}(T^k) = \text{nullity}(T^{k+1})$. Moreover, we have $\text{rank}(T^k) \leq \text{rank}(T^{k-1}) \leq \cdots \leq \text{rank}(T)$.\newline
+
+We will now show that $V = R(T^k) + \text{null}(T^k)$, which will imply that $V = R(T^k) \oplus \text{null}(T^k)$ by the direct sum theorem.\newline
+
+Let $v\in V$. Then, since $T$ is a linear transformation from $V$ to $V$, we have $\text{rank}(T^k) + \text{nullity}(T^k) = \dim(V)$, so there exist vectors $r\in R(T^k)$ and $n\in \text{null}(T^k)$ such that $v = r + n$.\newline
+
+To see this, let $u\in V$ be such that $T^k(u) = v$. Then, $T^{2k}(u) \in R(T^k)$ (by definition of $R(T^k)$), and $T^{2k}(u) = T^k(T^k(u)) = T^k(v)$, so $T^k(v)\in R(T^k)$. Moreover, since $T^k(v) = T^{2k}(u) = 0$ (since $u\in \text{null}(T^k)$), we have $v = r + n$, where $r = T^k(u) \in R(T^k)$ and $n = u \in \text{null}(T^k)$.\newline
+
+Therefore, we have shown that $V = R(T^k) + \text{null}(T^k)$, which implies that $V = R(T^k) \oplus \text{null}(T^k)$. Since $\text{null}(T^k) = \text{nullity}(T^k)$ and $\text{rank}(T^k) = \text{rank}(T^{k-1}) \leq \cdots \leq \text{rank}(T)$, we have $R(T^k) \subseteq R(T^{k-1}) \subseteq \cdots \subseteq R(T)$ and $\text{null}(T^k) \supseteq \text{null}(T^{k+1}) \supseteq \cdots \supseteq \text{null}(T)$.\newline
+
+Therefore, we have $V = R(T^k) \oplus \text{null}(T^k) = R(T^k) \oplus L(T^k)$, where $L(T^k) = \text{null}(T^k)$. This completes the proof.\newline
+
+### 18 Let $\beta$ be an ordered basis for a finite-dimensional vector space V, and let $T:V\to V$ be linear. Prove that, for any nonnegative integer k, $[T^k]\beta=([T_\beta])^k$\newline
+We will prove the result by induction on $k$.
+
+For the base case $k=0$, we have $[T^0]\beta = [I]\beta = I$, and $([T_\beta])^0 = I^0 = I$. Therefore, the result holds for $k=0$.
+
+Now, assume that the result holds for some nonnegative integer $k$. That is, we have $[T^k]\beta = ([T]\beta)^k$. We will show that the result also holds for $k+1$.
+
+We have:
+
+$[T^{k+1}]_\beta = [T(T^k)]_\beta = [T]_\beta [T^k]_\beta = [T]_\beta ([T]_\beta)^k = ([T]_\beta)^{k+1}$
+
+Therefore, we have shown that if the result holds for $k$, then it also holds for $k+1$. Since the result holds for $k=0$, it holds for all nonnegative integers $k$ by induction. That is, for any nonnegative integer $k$, we have $[T^k]\beta = ([T]\beta)^k$.
+
+## 2.4
+
+### 1
+a) FALSE\newline
+b) TRUE\newline
+c) TRUE\newline
+d) FALSE\newline
+e) TRUE\newline
+f) FALSE\newline
+g) TRUE\newline
+h) TRUE\newline
+i) TRUE\newline
+
+### 3
+
+#### a) $T:R^2\to R^3$ defined by $T(a_1,a_2)=(a_1-2a_2,a_2,3a_1+4a_2)$\newline
+
+NO, $dim(F^3)\ne dim(P_3(F))$\newline\newline
+
+#### c) $T:R^3\to R^3$ defined by $T(a_1,a_2,a_3)=(3a_1-2a_3,a_2,3a_1+4a_2)$\newline
+
+YES, $dim(M_{2\times2}(R)= dim(P_3(R))$\newline\newline
+
+### 6 Prove that if A is invertible and $AB=O$, then $B=O$
+
+**Proof: **\newline
+$AB=O,$ Then, $A^{-1}AB=A^{-1}O=O$, $A^{-1}AB=IB=B=O$\newline\newline
+
+### 7 Let A be an $n\times n$ matrix
+
+#### a) Suppose that $A^2=O$.Prove that A is not invertible\newline
+**Proof: **\newline
+By contradiction, A is invertible where $A^{-1}A=I$. Then $A^2=AA=O$, $A^{-1}AA=IA=A^{-1}O=O$. Because I is non-zero matrix, then the only way to have this expression be satisfied is have $A=O$. Then $A^2=AA=OO=O$.\newline\newline
+
+#### b) Suppose that $AB=O$ for some nonzero $n\times n$ matrix B. Could A be invertible? Explain.\newline
+
+**Proof: **\newline
+Assume that A is invertible, where $AA^{-1}=I$. Then $AA^{-1}B=OA^{-1}=O$, $IB=O$ Then if A is invertible, the only way to have this satisfy is to have $B=O$. Therefore, because B is a non-zero matrix, then A can't be invertible.
+
+
+### 14 Let $V=${$\begin{pmatrix}a&a+b\\0&c\end{pmatrix}:a,b,c\in F$} Construct an isomorphism from V to $F^3$
+
+Basis of V: {$\begin{pmatrix}1&1\\0&0\end{pmatrix}$,$\begin{pmatrix}0&1\\0&0\end{pmatrix}$,$\begin{pmatrix}0&0\\0&1\end{pmatrix}$}\newline
+$dim(V)=3=dim(F^3)$
+
+First, we will show that $\varphi$ is a linear transformation. Let $A=\begin{pmatrix}a&a+b\\0&c\end{pmatrix}$ and $B=\begin{pmatrix}d&d+e\\0&f\end{pmatrix}$ be arbitrary matrices in $V$, and let $k\in F$ be an arbitrary scalar. Then:
+
+You're right, there was a mistake in the algebra. Here's the corrected version:
+
+$\varphi(kA+B)=\varphi(k\begin{pmatrix}a&a+b\\0&c\end{pmatrix}+\begin{pmatrix}d&d+e\\0&f\end{pmatrix}) =\varphi\begin{pmatrix}ka+d & ka+d+b+e \\ 0 & kf \end{pmatrix}\begin{pmatrix} ka+d \\ b+e \\ kf \end{pmatrix}= \begin{pmatrix} ka \\ 0 \\ kf \end{pmatrix} + \begin{pmatrix} d \\ e \\ f \end{pmatrix} k \begin{pmatrix} a \\ 0 \\ c \end{pmatrix} + \begin{pmatrix} d \\ e \\ f \end{pmatrix}k \varphi\begin{pmatrix} a & a+b \\ 0 & c \end{pmatrix} + \varphi\begin{pmatrix} d & d+e \\ 0 & f \end{pmatrix} k \varphi(A) + \varphi(B)$
+
+
+So $\varphi$ satisfies the linearity property.
+
+Next, we will show that $\varphi$ is injective, i.e., that $\ker(\varphi) = {\mathbf{0}}$. Let $A = \begin{pmatrix}a&a+b\\0&c\end{pmatrix}$ be an arbitrary element of $V$ such that $\varphi(A) = \mathbf{0}$. Then $\begin{pmatrix}a\\b\\c\end{pmatrix} = \mathbf{0}$, so $a=b=c=0$. Therefore, $A = \begin{pmatrix}0&0\\0&0\end{pmatrix}$, and $\ker(\varphi) = {\mathbf{0}}$.
+
+Finally, we will show that $\varphi$ is surjective, i.e., that $\text{range}(\varphi) = F^3$. Let $\mathbf{v} = \begin{pmatrix}a\\b\\c\end{pmatrix}$ be an arbitrary element of $F^3$. Then $\varphi\left(\begin{pmatrix}a&a+b\\0&c\end{pmatrix}\right) = \begin{pmatrix}a\\b\\c\end{pmatrix} = \mathbf{v}$, so $\mathbf{v}$ is in the range of $\varphi$.
+
+Since $\varphi$ is a bijective linear transformation, it is an isomorphism from $V$ to $F^3$.
+
+### 16 Let B be an $n\times n$ invertible matrix. Define $\Phi: M^{n\times n}(F)\to M^{n\times n}(F)$ by $\Phi (A)=B^{-1}AB$. Prove that $\Phi$ is an isomorphism
+
+**Proof: **\newline
+To show that $\Phi$ is an isomorphism, we need to show that it is a bijective linear transformation.
+
+First, we will show that $\Phi$ is a linear transformation. Let $A,C \in M^{n\times n}(F)$ be arbitrary matrices, and let $k\in F$ be an arbitrary scalar. Then:$\Phi(kA+C) = B^{-1}(kA+C)B = k(B^{-1}AB) + B^{-1}CB = k\Phi(A) + \Phi(C)$
+
+So $\Phi$ satisfies the linearity property.
+
+Next, we will show that $\Phi$ is injective, i.e., that $\ker(\Phi) = {\mathbf{0}}$. Let $A \in M^{n\times n}(F)$ be an arbitrary matrix such that $\Phi(A) = \mathbf{0}$. Then $B^{-1}AB = \mathbf{0}$, so $A = \mathbf{0}$ since $B$ is invertible. Therefore, $\ker(\Phi) = {\mathbf{0}}$.
+
+Finally, we will show that $\Phi$ is surjective, i.e., that $\text{range}(\Phi) = M^{n\times n}(F)$. Let $C \in M^{n\times n}(F)$ be an arbitrary matrix. Since $B$ is invertible, $B^{-1}$ exists, and we have $\Phi(B^{-1}CB) = B^{-1}(B^{-1}CB)B = C$, so $\text{range}(\Phi) = M^{n\times n}(F)$.
+
+Since $\Phi$ is a bijective linear transformation, it is an isomorphism from $M^{n\times n}(F)$ to itself.
+
+## 2.5
+
+### 1 
+
+a)FALSE\newline
+b)TRUE\newline
+c)TRUE\newline
+d)FALSE\newline
+e)TRUE\newline\newline
+
+### 2 
+
+a) $Q=\begin{pmatrix}a_1&b_1\\a_2&b_2\end{pmatrix}$\newline
+b) $Q=\begin{pmatrix}4&1\\2&3\end{pmatrix}$\newline
+c) $Q=\begin{pmatrix}3&-1\\5&-2\end{pmatrix}$\newline
+d) $Q=\begin{pmatrix}2&-1\\5&-4\end{pmatrix}$\newline\newline
+
+
+### 4 Let T be the linear operator on $R^2$ defined by $T\begin{pmatrix}a\\b\end{pmatrix}=\begin{pmatrix}2a+b\\a-3b\end{pmatrix}$ let $\beta$ be the standard ordered basis for $R^2$, and let $\beta=${$\begin{pmatrix}1\\1\end{pmatrix}$,$\begin{pmatrix}1\\2\end{pmatrix}$}. Use Theorem 2.23 and the fact that $\begin{pmatrix}1&1\\1&2\end{pmatrix}^{-1} = \begin{pmatrix} 2&-1\\-1&1 \end{pmatrix}$ to find $[T]_{\beta'}$
+
+**Proof: **\newline
+We know that $[T]_\beta=\begin{pmatrix}2&1\\1&-3\end{pmatrix}$ and $Q=\begin{pmatrix}1&1\\1&2\end{pmatrix}$, $Q^{-1}=\begin{pmatrix}2&-1\\-1&1\end{pmatrix}$ Then $[T]_{\beta'}=[T]_\beta QQ^{-1}=\begin{pmatrix}8&13\\-5&-9\end{pmatrix}$
+
+### 5 Let T be the linear operator on $P_1(R)$ defined by $T(p(x))$, the derivatibe of $p(x)$. Let $\beta=${$1,x$} and $\beta=${$1+x,1-x$}. Use Theorem 2.23 and the fact that $\begin{pmatrix}1&1\\1&-1\end{pmatrix}^{-1}=\begin{pmatrix}\frac{1}{2}&\frac{1}{2}\\\frac{1}{2}& -\frac{1}{2}\end{pmatrix}$ to find $[T]_{\beta'}$
+
+We know that $[T]_\beta=\begin{pmatrix}0&1\\0&0\end{pmatrix}$, $Q=\begin{pmatrix}1&1\\1&-1\end{pmatrix}$ and $Q^{-1}=\begin{pmatrix}\frac{1}{2}&\frac{1}{2}\\\frac{1}{2}&-\frac{1}{2}\end{pmatrix}$\newline
+$[T]_{\beta'}=[T]_\beta QQ^{-1}=\begin{pmatrix}\frac{1}{2}&-\frac{1}{2}\\\frac{1}{2}&\frac{1}{2}\end{pmatrix}$
+

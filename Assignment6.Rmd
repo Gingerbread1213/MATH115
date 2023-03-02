@@ -1,0 +1,167 @@
+---
+title: "Math 115A Assign6"
+author: "Vincent"
+date: "2023-02-21"
+output: pdf_document
+---
+
+from Section 2.2: exercises 1; 2; 5(c); 8; 14.\newline
+
+from Section 2.3: exercises 1(a),(b),(c),(h); 2; 3; 9; 11; 13. \newline
+
+
+
+
+# 2.2
+
+
+## 1. Label the following statements as true or false. Assume that V and W are finite-dimensional vector spaces with ordered bases $\beta$ and $\gamma$, respectively, and $T,U:V\to W$ are linear transformations
+
+  a) TRUE\newline
+  b) TRUE\newline
+  c) FALSE\newline
+  d) TRUE\newline
+  e) TRUE\newline
+  f) FALSE\newline
+
+## 2. Let $\beta$ and $\gamma$ be the standard order bases for $R^n$ and $R^m$, respectively for each linear transformation $T:R^n\to R^m$, compute $[T]^\gamma_\beta$
+  
+  a) $[T]^\gamma_\beta=\begin{pmatrix}2&-1\\3&4\\1&0\end{pmatrix}$\newline
+  b) $[T]^\gamma_\beta=\begin{pmatrix}2&3&-1\\1&0&1\end{pmatrix}$\newline
+  c) $[T]^\gamma_\beta=\begin{pmatrix}2&1&-3\end{pmatrix}$\newline
+  d) $[T]^\gamma_\beta=\begin{pmatrix}0&2&1\\-1&4&5\\1&0&1\end{pmatrix}$\newline
+  e) $[T]^\gamma_\beta=\begin{pmatrix}1&0&...&0_{nth}\\1&0&...&0_{nth}\\|&&&|\\1_{nth}&0&...&0_{nth}\end{pmatrix}$\newline
+  f) $[T]^\gamma_\beta=\begin{pmatrix}0&0&...&1\\0&0&1&0\\|&&&|\\1&0&...&0\end{pmatrix}$\newline
+  g) $[T]^\gamma_\beta=\begin{pmatrix}1&0&...&0&1_{nth}\end{pmatrix}$\newline
+
+## 5(c). Let $\alpha=${$\begin{pmatrix}1&0\\0&0\end{pmatrix},\begin{pmatrix}0&1\\0&0\end{pmatrix},\begin{pmatrix}0&0\\1&0\end{pmatrix},\begin{pmatrix}0&0\\0&1\end{pmatrix}$}, $\beta =${$1,x,x^2$}. Define $T:M_{2\times 2}(F)\to R$ by $T(A)=tr(A)$. Compute $[T]^\gamma_\alpha$
+
+
+**Answer: **\newline
+$tr(\begin{pmatrix}1&0\\0&0\end{pmatrix},\begin{pmatrix}0&1\\0&0\end{pmatrix},\begin{pmatrix}0&0\\1&0\end{pmatrix},\begin{pmatrix}0&0\\0&1\end{pmatrix})=(1,0,0,1)$
+$[T]^\gamma_\alpha =$ {$1,0,0,1$}\newline\newline
+
+## 8. Let V be an n-dimensional vector space with an ordered basis $\beta$. Define $T:V\to F^n$ by $T(x)=[x]_\beta$. Prove that T is linear.
+
+
+**Proof: **\newline
+$T(cx)=[cx]_\beta=c[x]_\beta=cT(x)$\newline
+$T(x+y)=[x+y]_\beta=[x]_\beta+[y]_\beta=T(x)+T(y)$\newline
+T is linear\newline\newline
+
+## 14. Let V and W be vector spaces, and let T and U be nonzero linear transformations from V into W. if $R(T)\cap R(U)=${$0$}, Prove that {$T,U$} is a linearly independent subset of $L(V,W)$
+
+
+**Proof: **\newline
+Let $aT(v)+bU(v)=0$,(because $(aT+bU)v=0(v)$) then we will have $T(av)+U(bv)=0$ and $T(av)=U(-bv)$. Since $R(T)\cap R(U)=${$0$}, we can consider that $a=b=0$, also conclude that $T$ and $U$ are linearly independent\newline\newline
+
+# 2.3
+
+
+## 1
+
+  a) FALSE\newline
+  b) TRUE\newline
+  c) FALSE\newline
+  h) FALSE\newline\newline
+
+
+## 2. 
+
+### a) Let $A = \begin{pmatrix}1&3\\2&-1\end{pmatrix},B= \begin{pmatrix}1&0&-3\\4&1&2\end{pmatrix},C=\begin{pmatrix}1&1&4\\-1&-2&0\end{pmatrix},D=\begin{pmatrix}2\\-2\\3\end{pmatrix}$. Compute $A(2B+3C)$,$(AB)D$ and $A(BD)$
+
+**$A(2B+3C)=$** $\begin{pmatrix}20&-9&18\\5&10&8\end{pmatrix}$\newline
+**$(AB)D=A(BD)=$** $\begin{pmatrix}29\\-26\end{pmatrix}$\newline\newline
+
+### b) Let $A=\begin{pmatrix}2&5\\-3&1\\4&2\end{pmatrix},B=\begin{pmatrix}3&2&0\\1&-1&4\\5&5&3\end{pmatrix}, C=\begin{pmatrix}4&0&3\end{pmatrix}$. Compute $A^t,A^tB,BC^t,CB$ and $CA$
+
+
+**$A^t=$** $\begin{pmatrix}2&-3&4\\5&1&2\end{pmatrix}$\newline
+**$A^tB=$** $\begin{pmatrix}23&19&0\\26&-1&10\end{pmatrix}$\newline
+**$BC^t=$** $\begin{pmatrix}12\\16\\29\end{pmatrix}$\newline
+**$CB=$** $\begin{pmatrix}27&7&9\end{pmatrix}$\newline
+**$CA=$** $\begin{pmatrix}20&26\end{pmatrix}$\newline\newline
+
+
+
+## 3. Let $g(x)=3+x$. Let $T:P_2(R)\to P_2(R)$ and $U:P_2(R)\to R^3$ be the linear transformations respectively defined by $T(f(x))=f'(x)g(x)+2f(x)$ and $U(a+bx+cx^2)=(a+b,c,a-b)$. Let $\beta$ and $\gamma$ be the standard ordered bases of $P_2(R)$ and $R^3$, respectively\newline
+
+### a) Compute $[U]^\gamma_\beta$, $[T]_\beta$ and $[UT]^\gamma_\beta$ directly. Then use Theorem 2.11 to verify your result
+
+**Proof:**\newline
+$T(f(x))=(b+2cx)(3+x)+2(a+bx+cx^2)=(2a+3b)+(3b+6c)x+(4c)x^2$\newline
+$UT(1)=(2,0,2)$\newline
+$UT(x)=(6,0,0)$\newline
+$UT(x^2)=(6,4,-6)$\newline
+$[UT]^\gamma_\beta=\begin{pmatrix}2&6&6\\0&0&4\\2&0&-6\end{pmatrix}$\newline\newline
+
+$[U]^\beta_\gamma=\begin{pmatrix}1&1&0\\0&0&1\\1&-1&0\end{pmatrix}$\newline
+$[T]_\beta = \begin{pmatrix}2&3&0\\0&3&6\\0&6&4\end{pmatrix}$\newline
+$[U]^\beta_\gamma[T]_\beta=\begin{pmatrix}2&6&6\\0&0&4\\2&0&-6\end{pmatrix}=[UT]^\gamma_\beta$\newline\newline
+
+### b) Let $h(x)=3-2x+x^2$. Compute $[h(x)]_\beta$ and $[U(h(x))]_\gamma$. Then use $[U]^\gamma_\beta$ from (a) and Theorem 2.14 to verify your result.
+
+$[U(h(x))]_\gamma=\begin{pmatrix}1\\1\\5\end{pmatrix}$\newline
+$[h(x)]_\beta=\begin{pmatrix}3\\-2\\1\end{pmatrix}$\newline
+$[U]_\beta^\gamma[h]_\beta=\begin{pmatrix}1\\1\\5\end{pmatrix}=[U(h)]_\gamma$\newline\newline
+
+
+## 9. Find linear transformations $U,T:F^2\to F^2$ such that $UT =T_0$ (the zero transformation) but $TU\ne T_0$. Use your answer to find matrices A and B such that $AB = O$ but $BA \ne O$
+
+**Proof: **\newline
+$T(x, y) = (0, 0)$
+
+$U(x, y) = (y, 0)$
+
+Then, we have $UT(x, y) = T(U(x, y)) = T(y, 0) = (0, 0) = T0, and TU(x, y) = U(T(x, y)) = U(0, 0) = (0, 0) = T0$, as required.
+
+To find matrices A and B such that $AB = 0$ but $BA \ne 0$, we can represent T and U as matrices as follows:
+
+T = $\begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix}$
+
+U = $\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$
+
+Then, we have AB = TU = $\begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix}$, and BA = UT = $\begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}$.
+
+$T=\begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix}, U=\begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}, AB=TU=\begin{pmatrix} 0 & 0 \\ 0 & 0 \end{pmatrix}, BA=UT=\begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}$.
+
+## 11. Let V be a vector space, and let $T:V\to V$ be linear. Prove that $T^2=T_0$ if and only if $R(T)\subseteq N(T)$.
+
+**Proof: **\newline
+
+To prove that $T^2 = T_0$ if and only if $R(T) \subseteq N(T)$, we need to show two implications:\newline
+First, assume that $T^2 = T_0$. We want to show that $R(T) \subseteq N(T)$.\newline
+Let y be any element in $R(T)$. Then there exists an x in V such that $T(x) = y$. We want to show that $T(y) = T(T(x)) = T^2(x) = T_0(x) = 0$, which means that y is in $N(T)$.\newline
+Therefore, we have shown that $R(T) \subseteq N(T)$.\newline
+Second, assume that $R(T) \subseteq N(T)$. We want to show that $T^2 = T_0$.\newline
+Let x be any element in V. Then we have $T(T(x)) = T^2(x)$ and $T(x)$ is in $R(T)$. Since $R(T) \subseteq N(T)$, we know that $T(T(x)) = T^2(x) = 0$, which means that $T^2 = T_0$.\newline
+Therefore, we have shown that $T^2 = T_0$.\newline\newline
+
+## 13. Let A and B be $n\times n$ matrices. Recall that the trace of A is defined by $tr(A)=\Sigma^n_{i=1}A_{ii}$. Prove that $tr(AB)=tr(BA)$ and $tr(A)=tr(A^t)$
+
+**Proof: **
+
+To prove that $\operatorname{tr}(AB) = \operatorname{tr}(BA)$, we can expand both traces using the definition of matrix multiplication and the trace operator:
+
+$\operatorname{tr}(AB) = \sum_{i=1}^n (AB){ii} = \sum{i=1}^n \sum_{j=1}^n A_{ij}B_{ji}$
+
+$\operatorname{tr}(BA) = \sum_{i=1}^n (BA){ii} = \sum{i=1}^n \sum_{j=1}^n B_{ij}A_{ji}$
+
+We can then swap the order of summation in the second expression by renaming the indices:
+
+$\operatorname{tr}(BA) = \sum_{j=1}^n \sum_{i=1}^n B_{ji}A_{ij}$
+
+Now, we can see that the two expressions are identical, so we have proven that $\operatorname{tr}(AB) = \operatorname{tr}(BA)$.
+
+To prove that $\operatorname{tr}(A) = \operatorname{tr}(A^T)$, we can expand both traces using the definition of the trace operator:
+
+$\operatorname{tr}(A) = \sum_{i=1}^n A_{ii}$
+
+$\operatorname{tr}(A^T) = \sum_{i=1}^n (A^T){ii} = \sum{i=1}^n A_{ii}$
+
+Since the diagonal entries of $A$ are the same as the diagonal entries of $A^T$, the two expressions are identical, so we have proven that $\operatorname{tr}(A) = \operatorname{tr}(A^T)$.
+
+
+
+
+
