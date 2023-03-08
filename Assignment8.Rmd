@@ -1,0 +1,207 @@
+---
+title: "HW8"
+author: "Vincent"
+date: "2023-03-08"
+output: pdf_document
+---
+
+Section 2.5: 6; 10(a)
+
+Section 4.4: 2;  3(a),(b)(c)(d); 4(a)(b)c)(d);  
+
+Section 5.1: 3(a); 4(a); 10; 11; 13(a). 
+
+## 2.5
+
+### 6. 
+
+#### (a)
+
+**Answer: ** $Q^{-1}AQ = \begin{pmatrix}2&-1\\-1&1\end{pmatrix}\begin{pmatrix}1&3\\1&1\end{pmatrix}\begin{pmatrix}1&1\\1&2\end{pmatrix} = \begin{pmatrix}6&11\\-1&-4\end{pmatrix}$
+
+#### (b)
+**Answer: ** $Q^{-1}AQ = \begin{pmatrix}\frac{1}{2}&\frac{1}{2}\\\frac{1}{2}&-\frac{1}{2}\end{pmatrix}\begin{pmatrix}1&2\\2&1\end{pmatrix}\begin{pmatrix}1&1\\1&-1\end{pmatrix} = \begin{pmatrix}3&0\\0&-1\end{pmatrix}$
+
+#### (c)
+**Answer: ** $Q^{-1}AQ = \begin{pmatrix}1&1&-1\\1&-1&0\\-1&0&1\end{pmatrix}\begin{pmatrix}1&1&-1\\2&0&1\\1&1&0\end{pmatrix}\begin{pmatrix}1&1&1\\1&0&1\\1&1&2\end{pmatrix} = \begin{pmatrix}2&2&2\\-2&-3&-4\\1&1&2\end{pmatrix}$
+
+#### (d)
+**Answer: ** $Q^{-1}AQ = \begin{pmatrix}\frac{1}{6}&\frac{1}{6}&-\frac{1}{3}\\\frac{1}{2}&-\frac{1}{2}&0\\\frac{1}{3}&\frac{1}{3}&\frac{1}{3}\end{pmatrix}\begin{pmatrix}13&1&4\\1&13&4\\4&4&10\end{pmatrix}\begin{pmatrix}1&1&1\\1&-1&1\\-2&0&1\end{pmatrix} = \begin{pmatrix}6&0&0\\0&12&0\\0&0&18\end{pmatrix}$
+
+### 10(a). Let A and B be $n\times n$ matrices such that $AB = I_n$. Use Exercise 9 to conclude that A and B are invertible
+
+**Proof: **\newline
+Since $AB = I_n$ (the identity matrix of size $n$), we can conclude that both $A$ and $B$ are square matrices of size $n$. Therefore, by Exercise 9, we know that $A$ and $B$ are invertible and their inverses are given by $B = A^{-1}$ and $A = B^{-1}$.
+
+To see why this is the case, we can use the fact that if $AB = I_n$, then $A^{-1}$ exists and is given by $A^{-1} = B$. Similarly, since $AB = I_n$, we know that $B^{-1}$ exists and is given by $B^{-1} = A$. Therefore, both $A$ and $B$ are invertible with inverses given by $B = A^{-1}$ and $A = B^{-1}$.
+
+Thus, we have shown that if $AB = I_n$ for two $n \times n$ matrices $A$ and $B$, then $A$ and $B$ are invertible.
+
+## 4.4 
+
+### 2.
+
+#### (a) 
+
+**Answer: **$det(A) =$ 22
+
+#### (b) 
+
+**Answer: **$det(A) =$ -29
+
+#### (c)
+
+**Answer: **$det(A) =$ 2-4i
+
+#### (d)
+
+**Answer: **$det(A) =$ 6i-24
+
+### 3
+
+#### (a) 
+
+**Answer: **$det(A) =$ -12
+
+#### (b)
+
+**Answer: **$det(A) =$ -13
+
+#### (c)
+
+**Answer: **$det(A) =$ -12
+
+#### (d)
+
+**Answer: **$det(A) =$ -13
+
+
+### 4
+
+#### (a)
+
+**Answer: **$det(A) =$ 0
+
+#### (b)
+
+**Answer: **$det(A) =$ 36
+
+#### (c)
+
+**Answer: **$det(A) =$ -49
+
+#### (d)
+
+**Answer: **$det(A) =$ 10
+
+
+## 5.1
+
+### 3(a) For each of the following linear operators T on a vector space V and ordered bases $\beta$, compute $[T]_\beta$, and determine whether $\beta$ is a basis consisting of eigenvectors of T.
+
+$V = R^2, T\begin{pmatrix}a\\b\end{pmatrix}=\begin{pmatrix}10a-6b\\17a-10b\end{pmatrix}$, and $\beta =${$\begin{pmatrix}1\\2\end{pmatrix},\begin{pmatrix}2\\3\end{pmatrix}$}
+
+**Answer: **\newline
+$T\begin{pmatrix}1\\2\end{pmatrix}=\begin{pmatrix}-2\\-3\end{pmatrix}$\newline
+$T\begin{pmatrix}2\\3\end{pmatrix}=\begin{pmatrix}-2\\-4\end{pmatrix}$\newline
+$\begin{pmatrix}-2\\-3\end{pmatrix}=a\begin{pmatrix}1\\2\end{pmatrix}+b\begin{pmatrix}2\\3\end{pmatrix}$\newline
+$\begin{pmatrix}-2\\-4\end{pmatrix}=a\begin{pmatrix}1\\2\end{pmatrix}+b\begin{pmatrix}2\\3\end{pmatrix}$\newline
+$[T]_\beta = \begin{pmatrix}0&-2\\-1&0\end{pmatrix}$
+
+
+### 4(a)
+
+**i)**\newline
+$det(A-\lambda I)=(1-\lambda)(2-\lambda)-6=(\lambda-4)(\lambda+1)$\newline
+Eigenvalue = 1&4\newline
+
+**ii)**\newline
+$(A-4I) = \begin{pmatrix}-3&2\\0&0\end{pmatrix}\begin{pmatrix}x_1\\x_2\end{pmatrix}$\newline
+$3x_1=2x_2, x_1=\frac{2}{3}x_2,x=\begin{pmatrix}\frac{2}{3}\\1\end{pmatrix}$\newline
+$(A+I) = \begin{pmatrix}2&2\\0&0\end{pmatrix}\begin{pmatrix}x_1\\x_2\end{pmatrix}$\newline
+$x_1=-x_2, x=\begin{pmatrix}-1\\1\end{pmatrix}$
+
+**iii)**\newline
+**Linearly independent**, basis = {$\begin{pmatrix}-1\\1\end{pmatrix},\begin{pmatrix}\frac{2}{3}\\1\end{pmatrix}$}
+
+**iv)**\newline
+$Q = \begin{pmatrix}\frac{2}{3}&-1\\1&1\end{pmatrix}$ and $D=\begin{pmatrix}4&0\\0&-1\end{pmatrix}$
+
+### 10. Prove that the eigenvalues of an upper triangular matrix M are the diagonal entries of M.
+
+**Proof: **\newline
+When $M$ is a $1 \times 1$ matrix, it has only one diagonal entry, say $m_{11}$. The characteristic equation of $M$ is given by $|M - \lambda I| = m_{11} - \lambda = 0$, which has the unique solution $\lambda = m_{11}$. Therefore, the only eigenvalue of $M$ is its diagonal entry.\newline
+Let $\lambda$ be an eigenvalue of $M$ and let $v$ be a corresponding eigenvector. Then we have: $Mv=\lambda v$\newline 
+Since $M$ is upper triangular, the $n$-th entry of the vector $Mv$ is given by the $n$-th diagonal entry of $M$ multiplied by the $n$-th entry of $v$. Similarly, the $n$-th entry of the vector $\lambda v$ is given by $\lambda$ multiplied by the $n$-th entry of $v$. Therefore, we have: $m_{nn}v_n+\Sigma^{n-1}_{i=1}m_{ni}v_i=\lambda v_n$\newline
+Since $v$ is an eigenvector, it is nonzero, so $v_n \neq 0$. Therefore, we can solve for $\lambda$:$\lambda=m_{nn}-\frac{Sigma^{n-1}_{i=1}m_{ni}v_i}{v_n}$\newline
+Note that the right-hand side of this equation depends only on the diagonal entries and the entries in the first $n-1$ rows of $M$, and the entries of $v$ in the first $n-1$ rows. In other words, the value of $\lambda$ depends only on the upper left $(n-1) \times (n-1)$ submatrix of $M$ and the first $n-1$ entries of $v$. By the induction hypothesis, the eigenvalues of the upper left $(n-1) \times (n-1)$ submatrix of $M$ are its diagonal entries. Therefore, $\lambda$ must be equal to one of the diagonal entries of $M$.\newline
+Since $\lambda$ was an arbitrary eigenvalue of $M$, we have shown that all eigenvalues of $M$ are diagonal entries of $M$. This completes the proof by induction.\newline\newline
+
+
+
+
+### 11.Let V be a finite-dimensional vector space, and let $\lambda$ be any scalar.
+
+#### (a)For any ordered basis $\beta$ for V, prove that $[\lambda I_V]_\beta=\lambda I$.
+
+**Proof: **\newline
+Let $\beta = {v_1, v_2, \ldots, v_n}$ be an ordered basis for $V$, where $n$ is the dimension of $V$. Then the matrix of the identity transformation $I_V$ with respect to $\beta$ is the $n \times n$ identity matrix $I_n$. Therefore, the matrix of $\lambda I_V$ with respect to $\beta$ is the $n \times n$ matrix $[\lambda I_n]$.\newline
+
+To see this, note that for any vector $v \in V$, we have: $(\lambda I_V)(v)=a_1(\lambda v_1)+a_2(\lambda v_2)+...a_n(\lambda v_n)$\newline
+where $v = a_1 v_1 + a_2 v_2 + \cdots + a_n v_n$ is the coordinate vector of $v$ with respect to $\beta$. Therefore, the matrix of $(\lambda I_V)$ with respect to $\beta$ is the matrix $[\lambda I_n]$, which has $\lambda$ as its diagonal entries and $0$ as its off-diagonal entries.\newline
+Therefore, we have shown that $[\lambda I_V]_{\beta} = [\lambda I_n]$, as desired.\newline\newline
+
+#### (b) Compute the characteristic polynomial of $\lambda I_V$
+
+**Proof: **\newline
+$|\lambda I_V - \lambda I|=|(\lambda -\lambda)I_V|=0$ where $n$ is the dimension of $V$. Therefore, the characteristic polynomial of $\lambda I_V$ is $\lambda^n$.\newline
+
+Note that the fact that the characteristic polynomial is $\lambda^n$ implies that the only eigenvalue of $\lambda I_V$ is $0$ (with algebraic multiplicity $n$), since the roots of the characteristic polynomial are precisely the eigenvalues of the matrix. In other words, every vector in $V$ is an eigenvector of $\lambda I_V$ with eigenvalue $0$.\newline\newline
+
+#### (c) Show that $\lambda I_V$ is diagonalizable and has only one eigenvalue.
+
+**Proof: **\newline
+We have already shown in the previous question that the characteristic polynomial of $\lambda I_V$ is $\lambda^n$, which has only one root, namely $\lambda = 0$. Therefore, the only eigenvalue of $\lambda I_V$ is $0$, with algebraic multiplicity $n$.\newline
+
+To show that $\lambda I_V$ is diagonalizable, we need to show that its geometric multiplicity (i.e., the dimension of its eigenspace corresponding to the eigenvalue $0$) is also $n$.\newline
+
+Since every vector in $V$ is an eigenvector of $\lambda I_V$ with eigenvalue $0$, the eigenspace corresponding to the eigenvalue $0$ is the entire vector space $V$. Therefore, the geometric multiplicity of $0$ as an eigenvalue of $\lambda I_V$ is $n$, which is equal to its algebraic multiplicity.\newline
+
+Since the algebraic and geometric multiplicities of every eigenvalue of a matrix are equal if and only if the matrix is diagonalizable, we conclude that $\lambda I_V$ is diagonalizable. Moreover, since $\lambda I_V$ has only one eigenvalue, namely $0$, it follows that every matrix that is a scalar multiple of the identity matrix (with respect to some basis) is diagonalizable and has only one eigenvalue, which is equal to the scalar multiple.\newline\newline
+
+### 13(a) Prove that similar matrices have the same characteristic polynomial.
+
+**Proof: **\newline
+
+Let $A$ and $B$ be two $n \times n$ matrices that are similar, meaning there exists an invertible matrix $P$ such that $B=P^{-1}AP$.\newline
+
+The characteristic polynomial of $A$ is defined as $\det(A-\lambda I)$, where $I$ is the identity matrix and $\lambda$ is a scalar variable. Let $C=A-\lambda I$.\newline
+
+Then, $B=P^{-1}AP$ implies that $PBP^{-1} = A$, so we can also write $B = PAP^{-1}$.\newline
+
+Substituting this expression for $A$ into our definition of $C$, we get:
+
+$$C=B-\lambda I = PAP^{-1} - \lambda I = P(A-\lambda I)P^{-1} = PCP^{-1}$$\newline
+
+Now, we take the determinant of both sides:
+
+$$\det(C) = \det(PCP^{-1})$$\newline
+
+Using the property that $\det(AB)=\det(A)\det(B)$ for any matrices $A$ and $B$, we can simplify this expression as:
+
+$$\det(C) = \det(P)\det(C)\det(P^{-1}) = \det(P)\det(P^{-1})\det(C)$$\newline
+
+Since $P$ is invertible, we know that $\det(P)\det(P^{-1}) = \det(I) = 1$, so we can simplify further:\newline
+
+$$\det(C) = \det(P)\det(P^{-1})\det(C) = \det(P^{-1})\det(P)\det(C) = \det(B-\lambda I)$$\newline
+
+Therefore, we have shown that $\det(A-\lambda I) = \det(B-\lambda I)$, which means that $A$ and $B$ have the same characteristic polynomial.\newline\newline
+
+
+
+
+
+
+
+
+
